@@ -1,0 +1,5 @@
+profile: service
+defaultPackage: no.ssb.rawdata.converter.app.freg
+---
+testFramework: junit
+sourceLanguage: java
