@@ -31,6 +31,3 @@ build-mvn                      Build the project and install to you local maven 
 build-docker                   Build the docker image
 run-local                      Run the app locally (without docker)
 ```
-
-## Management
-
