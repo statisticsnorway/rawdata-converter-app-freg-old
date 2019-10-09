@@ -2,26 +2,27 @@ package no.ssb.rawdata.converter.app.freg;
 
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
+import no.ssb.avro.convert.xml.XmlToRecords;
 import no.ssb.rawdata.api.RawdataMessage;
 import no.ssb.rawdata.converter.core.AggregateSchemaBuilder;
 import no.ssb.rawdata.converter.core.RawdataConverter;
-import no.ssb.transform.xmlparquet.RecursiveXmlParser;
-import no.ssb.transfrom.parquet.SchemaAwareElement;
-import no.ssb.transfrom.parquet.SchemaWrapper;
 import org.apache.avro.Schema;
 import org.apache.avro.generic.GenericRecord;
 import org.apache.avro.generic.GenericRecordBuilder;
 
 import javax.inject.Singleton;
+import javax.xml.stream.XMLStreamException;
 import java.io.ByteArrayInputStream;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
 
 @Singleton
@@ -63,8 +64,8 @@ public class FregRawdataConverter implements RawdataConverter {
         GenericRecordBuilder rootRecordBuilder = new GenericRecordBuilder(aggregateSchema);
         FregItem fregItem = FregItem.from(rawdataMessage);
         if (fregItem.hasPerson()) {
-            xmlToAvro(fregPersonSchema, ELEMENT_NAME_FREG_PERSON, fregItem.getPersonXml()).forEach(record ->
-                rootRecordBuilder.set(ELEMENT_NAME_FREG_PERSON, record)
+            xmlToAvro(fregItem.getPersonXml(), ELEMENT_NAME_FREG_PERSON, fregPersonSchema).forEach(record ->
+              rootRecordBuilder.set(ELEMENT_NAME_FREG_PERSON, record)
             );
         }
         else {
@@ -72,7 +73,7 @@ public class FregRawdataConverter implements RawdataConverter {
         }
 
         if (fregItem.hasEvent()) {
-            xmlToAvro(fregEventSchema, ELEMENT_NAME_FREG_EVENT, fregItem.getEventXml()).forEach(record ->
+            xmlToAvro(fregItem.getEventXml(), ELEMENT_NAME_FREG_EVENT, fregEventSchema).forEach(record ->
                 rootRecordBuilder.set(ELEMENT_NAME_FREG_EVENT, record)
             );
         }
@@ -83,14 +84,12 @@ public class FregRawdataConverter implements RawdataConverter {
         return rootRecordBuilder.build();
     }
 
-    List<GenericRecord> xmlToAvro(Schema schema, String rootXmlElementName, byte [] xmlData) {
-        SchemaWrapper schemaWrapper = SchemaWrapper.parse(schema);
-        try (RecursiveXmlParser recursiveXmlParser = new RecursiveXmlParser(new ByteArrayInputStream(xmlData), rootXmlElementName)) {
-            return StreamSupport.stream(recursiveXmlParser.spliterator(), false)
-              .map(dataElement -> SchemaAwareElement.toRecord(dataElement, schemaWrapper))
-              .collect(Collectors.toList());
-        } catch (Exception e) {
-            throw new FregRawdataConverterException("Error converting XML to Avro", e);
+    Stream<GenericRecord> xmlToAvro(byte[] xmlData, String rootXmlElementName, Schema schema) {
+        InputStream xmlInputStream = new ByteArrayInputStream(xmlData);
+        try (XmlToRecords xmlToRecords = new XmlToRecords(xmlInputStream, rootXmlElementName, schema)) {
+            return StreamSupport.stream(xmlToRecords.spliterator(), false);
+        } catch (XMLStreamException | IOException e) {
+            throw new FregRawdataConverterException("Error converting to XML", e);
         }
     }
 
