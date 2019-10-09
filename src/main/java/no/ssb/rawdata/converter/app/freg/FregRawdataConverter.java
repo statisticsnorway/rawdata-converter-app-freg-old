@@ -64,7 +64,7 @@ public class FregRawdataConverter implements RawdataConverter {
         FregItem fregItem = FregItem.from(rawdataMessage);
         if (fregItem.hasPerson()) {
             xmlToAvro(fregPersonSchema, ELEMENT_NAME_FREG_PERSON, fregItem.getPersonXml()).forEach(record ->
-                rootRecordBuilder.set(ELEMENT_NAME_FREG_PERSON, record);
+                rootRecordBuilder.set(ELEMENT_NAME_FREG_PERSON, record)
             );
         }
         else {
