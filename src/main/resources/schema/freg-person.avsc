@@ -10,21 +10,25 @@
       "fields" : [ {
         "name" : "ajourholdstidspunkt",
         "type" : [ "null", "string" ],
+        "doc" : "en kombinasjon av typene Dato og Klokkeslett. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data\n        elements and interchange formats -- Information interchange -- Representation of dates and times).",
         "default" : null,
         "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:ajourholdstidspunkt"
       }, {
         "name" : "erGjeldende",
         "type" : [ "null", "boolean" ],
+        "doc" : "angir verdien sann eller usann",
         "default" : null,
         "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:erGjeldende"
       }, {
         "name" : "kilde",
         "type" : [ "null", "string" ],
+        "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
         "default" : null,
         "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:kilde"
       }, {
         "name" : "aarsak",
         "type" : [ "null", "string" ],
+        "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
         "default" : null,
         "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:aarsak"
       }, {
@@ -40,22 +44,27 @@
               "fields" : [ {
                 "name" : "fornavn",
                 "type" : "string",
+                "doc" : "fornavn på person",
                 "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:fornavn"
               }, {
                 "name" : "mellomnavn",
                 "type" : [ "null", "string" ],
+                "doc" : "mellomnavn på person",
                 "default" : null,
                 "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:mellomnavn"
               }, {
                 "name" : "etternavn",
                 "type" : "string",
+                "doc" : "etternavn på person",
                 "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:etternavn"
               } ]
             },
+            "doc" : "navn på person",
             "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:personnavn"
           }, {
             "name" : "foedselsdato",
             "type" : [ "null", "string" ],
+            "doc" : "gir verdier for år, måned og dag. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data elements\n        and interchange formats -- Information interchange -- Representation of dates and times).\n        Eksempel : 1998-12-21 eller 19981221.",
             "default" : null,
             "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:foedselsdato"
           }, {
@@ -77,16 +86,19 @@
       }, {
         "name" : "rettIdentitetErUkjent",
         "type" : [ "null", "boolean" ],
+        "doc" : "angir verdien sann eller usann",
         "default" : null,
         "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:rettIdentitetErUkjent"
       }, {
         "name" : "rettIdentitetVedIdentifikasjonsnummer",
         "type" : [ "null", "string" ],
+        "doc" : "ellevesifret identifikasjonsnummer for personer bosatt i Norge, der de seks første sifrene angir fødselsdato og de fem siste\n        personnummer.",
         "default" : null,
         "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:rettIdentitetVedIdentifikasjonsnummer"
       }, {
         "name" : "erFalsk",
         "type" : "boolean",
+        "doc" : "angir verdien sann eller usann",
         "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:erFalsk"
       } ]
     } ],
@@ -102,31 +114,37 @@
         "fields" : [ {
           "name" : "ajourholdstidspunkt",
           "type" : [ "null", "string" ],
+          "doc" : "en kombinasjon av typene Dato og Klokkeslett. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data\n        elements and interchange formats -- Information interchange -- Representation of dates and times).",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:ajourholdstidspunkt"
         }, {
           "name" : "erGjeldende",
           "type" : [ "null", "boolean" ],
+          "doc" : "angir verdien sann eller usann",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:erGjeldende"
         }, {
           "name" : "kilde",
           "type" : [ "null", "string" ],
+          "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:kilde"
         }, {
           "name" : "aarsak",
           "type" : [ "null", "string" ],
+          "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:aarsak"
         }, {
           "name" : "gyldighetstidspunkt",
           "type" : [ "null", "string" ],
+          "doc" : "en kombinasjon av typene Dato og Klokkeslett. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data\n        elements and interchange formats -- Information interchange -- Representation of dates and times).",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:gyldighetstidspunkt"
         }, {
           "name" : "opphoerstidspunkt",
           "type" : [ "null", "string" ],
+          "doc" : "en kombinasjon av typene Dato og Klokkeslett. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data\n        elements and interchange formats -- Information interchange -- Representation of dates and times).",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:opphoerstidspunkt"
         }, {
@@ -136,6 +154,7 @@
         }, {
           "name" : "foedselsEllerDNummer",
           "type" : "string",
+          "doc" : "ellevesifret identifikasjonsnummer for personer bosatt i Norge, der de seks første sifrene angir fødselsdato og de fem siste\n        personnummer.",
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:foedselsEllerDNummer"
         }, {
           "name" : "identifikatortype",
@@ -155,31 +174,37 @@
         "fields" : [ {
           "name" : "ajourholdstidspunkt",
           "type" : [ "null", "string" ],
+          "doc" : "en kombinasjon av typene Dato og Klokkeslett. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data\n        elements and interchange formats -- Information interchange -- Representation of dates and times).",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:ajourholdstidspunkt"
         }, {
           "name" : "erGjeldende",
           "type" : [ "null", "boolean" ],
+          "doc" : "angir verdien sann eller usann",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:erGjeldende"
         }, {
           "name" : "kilde",
           "type" : [ "null", "string" ],
+          "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:kilde"
         }, {
           "name" : "aarsak",
           "type" : [ "null", "string" ],
+          "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:aarsak"
         }, {
           "name" : "gyldighetstidspunkt",
           "type" : [ "null", "string" ],
+          "doc" : "en kombinasjon av typene Dato og Klokkeslett. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data\n        elements and interchange formats -- Information interchange -- Representation of dates and times).",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:gyldighetstidspunkt"
         }, {
           "name" : "opphoerstidspunkt",
           "type" : [ "null", "string" ],
+          "doc" : "en kombinasjon av typene Dato og Klokkeslett. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data\n        elements and interchange formats -- Information interchange -- Representation of dates and times).",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:opphoerstidspunkt"
         }, {
@@ -201,31 +226,37 @@
         "fields" : [ {
           "name" : "ajourholdstidspunkt",
           "type" : [ "null", "string" ],
+          "doc" : "en kombinasjon av typene Dato og Klokkeslett. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data\n        elements and interchange formats -- Information interchange -- Representation of dates and times).",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:ajourholdstidspunkt"
         }, {
           "name" : "erGjeldende",
           "type" : [ "null", "boolean" ],
+          "doc" : "angir verdien sann eller usann",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:erGjeldende"
         }, {
           "name" : "kilde",
           "type" : [ "null", "string" ],
+          "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:kilde"
         }, {
           "name" : "aarsak",
           "type" : [ "null", "string" ],
+          "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:aarsak"
         }, {
           "name" : "gyldighetstidspunkt",
           "type" : [ "null", "string" ],
+          "doc" : "en kombinasjon av typene Dato og Klokkeslett. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data\n        elements and interchange formats -- Information interchange -- Representation of dates and times).",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:gyldighetstidspunkt"
         }, {
           "name" : "opphoerstidspunkt",
           "type" : [ "null", "string" ],
+          "doc" : "en kombinasjon av typene Dato og Klokkeslett. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data\n        elements and interchange formats -- Information interchange -- Representation of dates and times).",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:opphoerstidspunkt"
         }, {
@@ -236,16 +267,19 @@
             "fields" : [ {
               "name" : "foedselsdato",
               "type" : [ "null", "string" ],
+              "doc" : "gir verdier for år, måned og dag. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data elements\n        and interchange formats -- Information interchange -- Representation of dates and times).\n        Eksempel : 1998-12-21 eller 19981221.",
               "default" : null,
               "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:foedselsdato"
             }, {
               "name" : "personnavn",
               "type" : [ "null", "Personnavn" ],
+              "doc" : "navn på person",
               "default" : null,
               "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:personnavn"
             }, {
               "name" : "foedselsEllerDNummer",
               "type" : [ "null", "string" ],
+              "doc" : "ellevesifret identifikasjonsnummer for personer bosatt i Norge, der de seks første sifrene angir fødselsdato og de fem siste\n        personnummer.",
               "default" : null,
               "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:foedselsEllerDNummer"
             } ]
@@ -260,15 +294,18 @@
             "fields" : [ {
               "name" : "personnavn",
               "type" : "Personnavn",
+              "doc" : "navn på person",
               "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:personnavn"
             }, {
               "name" : "organisasjonsnavn",
               "type" : [ "null", "string" ],
+              "doc" : "navn på organisasjon",
               "default" : null,
               "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:organisasjonsnavn"
             }, {
               "name" : "organisasjonsnummer",
               "type" : [ "null", "string" ],
+              "doc" : "9 sifret nummer gitt de som er registrert i Enhetsregisteret.",
               "default" : null,
               "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:organisasjonsnummer"
             } ]
@@ -283,15 +320,18 @@
             "fields" : [ {
               "name" : "organisasjonsnavn",
               "type" : "string",
+              "doc" : "navn på organisasjon",
               "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:organisasjonsnavn"
             }, {
               "name" : "organisasjonsnummer",
               "type" : [ "null", "string" ],
+              "doc" : "9 sifret nummer gitt de som er registrert i Enhetsregisteret.",
               "default" : null,
               "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:organisasjonsnummer"
             }, {
               "name" : "kontaktpersonnavn",
               "type" : [ "null", "Personnavn" ],
+              "doc" : "navn på person",
               "default" : null,
               "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:kontaktpersonnavn"
             } ]
@@ -305,6 +345,7 @@
         }, {
           "name" : "attestutstedelsesdato",
           "type" : "string",
+          "doc" : "gir verdier for år, måned og dag. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data elements\n        and interchange formats -- Information interchange -- Representation of dates and times).\n        Eksempel : 1998-12-21 eller 19981221.",
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:attestutstedelsesdato"
         }, {
           "name" : "adresse",
@@ -317,18 +358,22 @@
                 "type" : "array",
                 "items" : "string"
               },
+              "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
               "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:adresselinje"
             }, {
               "name" : "poststedsnavn",
               "type" : "string",
+              "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
               "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:poststedsnavn"
             }, {
               "name" : "postnummer",
               "type" : "string",
+              "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
               "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:postnummer"
             }, {
               "name" : "landkode",
               "type" : [ "null", "string" ],
+              "doc" : "geografisk koding av stater, deres oversjøiske områder samt for underinndeling av land",
               "default" : null,
               "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:landkode"
             } ]
@@ -349,31 +394,37 @@
         "fields" : [ {
           "name" : "ajourholdstidspunkt",
           "type" : [ "null", "string" ],
+          "doc" : "en kombinasjon av typene Dato og Klokkeslett. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data\n        elements and interchange formats -- Information interchange -- Representation of dates and times).",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:ajourholdstidspunkt"
         }, {
           "name" : "erGjeldende",
           "type" : [ "null", "boolean" ],
+          "doc" : "angir verdien sann eller usann",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:erGjeldende"
         }, {
           "name" : "kilde",
           "type" : [ "null", "string" ],
+          "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:kilde"
         }, {
           "name" : "aarsak",
           "type" : [ "null", "string" ],
+          "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:aarsak"
         }, {
           "name" : "identifikasjonsdokumentnummer",
           "type" : [ "null", "string" ],
+          "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:identifikasjonsdokumentnummer"
         }, {
           "name" : "identifikasjonsdokumenttype",
           "type" : "string",
+          "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:identifikasjonsdokumenttype"
         }, {
           "name" : "utstederland",
@@ -382,16 +433,19 @@
         }, {
           "name" : "utstedernavn",
           "type" : [ "null", "string" ],
+          "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:utstedernavn"
         }, {
           "name" : "gyldigFra",
           "type" : [ "null", "string" ],
+          "doc" : "gir verdier for år, måned og dag. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data elements\n        and interchange formats -- Information interchange -- Representation of dates and times).\n        Eksempel : 1998-12-21 eller 19981221.",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:gyldigFra"
         }, {
           "name" : "gyldigTil",
           "type" : [ "null", "string" ],
+          "doc" : "gir verdier for år, måned og dag. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data elements\n        and interchange formats -- Information interchange -- Representation of dates and times).\n        Eksempel : 1998-12-21 eller 19981221.",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:gyldigTil"
         }, {
@@ -402,10 +456,12 @@
             "fields" : [ {
               "name" : "dokumentkontrollstatus",
               "type" : "string",
+              "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
               "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:dokumentkontrollstatus"
             }, {
               "name" : "dokumentkontrolltidspunkt",
               "type" : [ "null", "string" ],
+              "doc" : "en kombinasjon av typene Dato og Klokkeslett. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data\n        elements and interchange formats -- Information interchange -- Representation of dates and times).",
               "default" : null,
               "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:dokumentkontrolltidspunkt"
             } ]
@@ -427,31 +483,37 @@
         "fields" : [ {
           "name" : "ajourholdstidspunkt",
           "type" : [ "null", "string" ],
+          "doc" : "en kombinasjon av typene Dato og Klokkeslett. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data\n        elements and interchange formats -- Information interchange -- Representation of dates and times).",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:ajourholdstidspunkt"
         }, {
           "name" : "erGjeldende",
           "type" : [ "null", "boolean" ],
+          "doc" : "angir verdien sann eller usann",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:erGjeldende"
         }, {
           "name" : "kilde",
           "type" : [ "null", "string" ],
+          "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:kilde"
         }, {
           "name" : "aarsak",
           "type" : [ "null", "string" ],
+          "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:aarsak"
         }, {
           "name" : "gyldighetstidspunkt",
           "type" : [ "null", "string" ],
+          "doc" : "en kombinasjon av typene Dato og Klokkeslett. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data\n        elements and interchange formats -- Information interchange -- Representation of dates and times).",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:gyldighetstidspunkt"
         }, {
           "name" : "opphoerstidspunkt",
           "type" : [ "null", "string" ],
+          "doc" : "en kombinasjon av typene Dato og Klokkeslett. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data\n        elements and interchange formats -- Information interchange -- Representation of dates and times).",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:opphoerstidspunkt"
         }, {
@@ -473,40 +535,48 @@
         "fields" : [ {
           "name" : "ajourholdstidspunkt",
           "type" : [ "null", "string" ],
+          "doc" : "en kombinasjon av typene Dato og Klokkeslett. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data\n        elements and interchange formats -- Information interchange -- Representation of dates and times).",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:ajourholdstidspunkt"
         }, {
           "name" : "erGjeldende",
           "type" : [ "null", "boolean" ],
+          "doc" : "angir verdien sann eller usann",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:erGjeldende"
         }, {
           "name" : "kilde",
           "type" : [ "null", "string" ],
+          "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:kilde"
         }, {
           "name" : "aarsak",
           "type" : [ "null", "string" ],
+          "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:aarsak"
         }, {
           "name" : "gyldighetstidspunkt",
           "type" : [ "null", "string" ],
+          "doc" : "en kombinasjon av typene Dato og Klokkeslett. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data\n        elements and interchange formats -- Information interchange -- Representation of dates and times).",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:gyldighetstidspunkt"
         }, {
           "name" : "opphoerstidspunkt",
           "type" : [ "null", "string" ],
+          "doc" : "en kombinasjon av typene Dato og Klokkeslett. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data\n        elements and interchange formats -- Information interchange -- Representation of dates and times).",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:opphoerstidspunkt"
         }, {
           "name" : "identifikasjonsnummer",
           "type" : "string",
+          "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:identifikasjonsnummer"
         }, {
           "name" : "identifikasjonsnummertype",
           "type" : "string",
+          "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:identifikasjonsnummertype"
         }, {
           "name" : "utstederland",
@@ -535,31 +605,37 @@
         "fields" : [ {
           "name" : "ajourholdstidspunkt",
           "type" : [ "null", "string" ],
+          "doc" : "en kombinasjon av typene Dato og Klokkeslett. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data\n        elements and interchange formats -- Information interchange -- Representation of dates and times).",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:ajourholdstidspunkt"
         }, {
           "name" : "erGjeldende",
           "type" : [ "null", "boolean" ],
+          "doc" : "angir verdien sann eller usann",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:erGjeldende"
         }, {
           "name" : "kilde",
           "type" : [ "null", "string" ],
+          "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:kilde"
         }, {
           "name" : "aarsak",
           "type" : [ "null", "string" ],
+          "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:aarsak"
         }, {
           "name" : "gyldighetstidspunkt",
           "type" : [ "null", "string" ],
+          "doc" : "en kombinasjon av typene Dato og Klokkeslett. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data\n        elements and interchange formats -- Information interchange -- Representation of dates and times).",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:gyldighetstidspunkt"
         }, {
           "name" : "opphoerstidspunkt",
           "type" : [ "null", "string" ],
+          "doc" : "en kombinasjon av typene Dato og Klokkeslett. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data\n        elements and interchange formats -- Information interchange -- Representation of dates and times).",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:opphoerstidspunkt"
         }, {
@@ -574,6 +650,7 @@
             }, {
               "name" : "bruksenhetsnummer",
               "type" : [ "null", "string" ],
+              "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
               "default" : null,
               "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:bruksenhetsnummer"
             }, {
@@ -584,6 +661,7 @@
             }, {
               "name" : "adressenavn",
               "type" : "string",
+              "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
               "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:adressenavn"
             }, {
               "name" : "adressenummer",
@@ -606,11 +684,13 @@
             }, {
               "name" : "adressekode",
               "type" : [ "null", "string" ],
+              "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
               "default" : null,
               "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:adressekode"
             }, {
               "name" : "adressetilleggsnavn",
               "type" : [ "null", "string" ],
+              "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
               "default" : null,
               "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:adressetilleggsnavn"
             }, {
@@ -621,6 +701,7 @@
                 "fields" : [ {
                   "name" : "poststedsnavn",
                   "type" : [ "null", "string" ],
+                  "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
                   "default" : null,
                   "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:poststedsnavn"
                 }, {
@@ -635,6 +716,7 @@
             }, {
               "name" : "coAdressenavn",
               "type" : [ "null", "string" ],
+              "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
               "default" : null,
               "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:coAdressenavn"
             } ]
@@ -649,6 +731,7 @@
             "fields" : [ {
               "name" : "bruksenhetsnummer",
               "type" : [ "null", "string" ],
+              "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
               "default" : null,
               "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:bruksenhetsnummer"
             }, {
@@ -689,6 +772,7 @@
             }, {
               "name" : "adressetilleggsnavn",
               "type" : [ "null", "string" ],
+              "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
               "default" : null,
               "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:adressetilleggsnavn"
             }, {
@@ -699,6 +783,7 @@
             }, {
               "name" : "coAdressenavn",
               "type" : [ "null", "string" ],
+              "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
               "default" : null,
               "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:coAdressenavn"
             } ]
@@ -722,10 +807,12 @@
         }, {
           "name" : "startdatoForKontrakt",
           "type" : "string",
+          "doc" : "gir verdier for år, måned og dag. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data elements\n        and interchange formats -- Information interchange -- Representation of dates and times).\n        Eksempel : 1998-12-21 eller 19981221.",
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:startdatoForKontrakt"
         }, {
           "name" : "sluttdatoForKontrakt",
           "type" : [ "null", "string" ],
+          "doc" : "gir verdier for år, måned og dag. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data elements\n        and interchange formats -- Information interchange -- Representation of dates and times).\n        Eksempel : 1998-12-21 eller 19981221.",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:sluttdatoForKontrakt"
         }, {
@@ -757,31 +844,37 @@
         "fields" : [ {
           "name" : "ajourholdstidspunkt",
           "type" : [ "null", "string" ],
+          "doc" : "en kombinasjon av typene Dato og Klokkeslett. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data\n        elements and interchange formats -- Information interchange -- Representation of dates and times).",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:ajourholdstidspunkt"
         }, {
           "name" : "erGjeldende",
           "type" : [ "null", "boolean" ],
+          "doc" : "angir verdien sann eller usann",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:erGjeldende"
         }, {
           "name" : "kilde",
           "type" : [ "null", "string" ],
+          "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:kilde"
         }, {
           "name" : "aarsak",
           "type" : [ "null", "string" ],
+          "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:aarsak"
         }, {
           "name" : "gyldighetstidspunkt",
           "type" : [ "null", "string" ],
+          "doc" : "en kombinasjon av typene Dato og Klokkeslett. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data\n        elements and interchange formats -- Information interchange -- Representation of dates and times).",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:gyldighetstidspunkt"
         }, {
           "name" : "opphoerstidspunkt",
           "type" : [ "null", "string" ],
+          "doc" : "en kombinasjon av typene Dato og Klokkeslett. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data\n        elements and interchange formats -- Information interchange -- Representation of dates and times).",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:opphoerstidspunkt"
         }, {
@@ -803,36 +896,43 @@
         "fields" : [ {
           "name" : "ajourholdstidspunkt",
           "type" : [ "null", "string" ],
+          "doc" : "en kombinasjon av typene Dato og Klokkeslett. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data\n        elements and interchange formats -- Information interchange -- Representation of dates and times).",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:ajourholdstidspunkt"
         }, {
           "name" : "erGjeldende",
           "type" : [ "null", "boolean" ],
+          "doc" : "angir verdien sann eller usann",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:erGjeldende"
         }, {
           "name" : "kilde",
           "type" : [ "null", "string" ],
+          "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:kilde"
         }, {
           "name" : "aarsak",
           "type" : [ "null", "string" ],
+          "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:aarsak"
         }, {
           "name" : "gyldighetstidspunkt",
           "type" : [ "null", "string" ],
+          "doc" : "en kombinasjon av typene Dato og Klokkeslett. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data\n        elements and interchange formats -- Information interchange -- Representation of dates and times).",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:gyldighetstidspunkt"
         }, {
           "name" : "opphoerstidspunkt",
           "type" : [ "null", "string" ],
+          "doc" : "en kombinasjon av typene Dato og Klokkeslett. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data\n        elements and interchange formats -- Information interchange -- Representation of dates and times).",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:opphoerstidspunkt"
         }, {
           "name" : "foedselsdato",
           "type" : [ "null", "string" ],
+          "doc" : "gir verdier for år, måned og dag. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data elements\n        and interchange formats -- Information interchange -- Representation of dates and times).\n        Eksempel : 1998-12-21 eller 19981221.",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:foedselsdato"
         }, {
@@ -842,6 +942,7 @@
         }, {
           "name" : "foedested",
           "type" : [ "null", "string" ],
+          "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:foedested"
         }, {
@@ -869,36 +970,43 @@
         "fields" : [ {
           "name" : "ajourholdstidspunkt",
           "type" : [ "null", "string" ],
+          "doc" : "en kombinasjon av typene Dato og Klokkeslett. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data\n        elements and interchange formats -- Information interchange -- Representation of dates and times).",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:ajourholdstidspunkt"
         }, {
           "name" : "erGjeldende",
           "type" : [ "null", "boolean" ],
+          "doc" : "angir verdien sann eller usann",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:erGjeldende"
         }, {
           "name" : "kilde",
           "type" : [ "null", "string" ],
+          "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:kilde"
         }, {
           "name" : "aarsak",
           "type" : [ "null", "string" ],
+          "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:aarsak"
         }, {
           "name" : "gyldighetstidspunkt",
           "type" : [ "null", "string" ],
+          "doc" : "en kombinasjon av typene Dato og Klokkeslett. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data\n        elements and interchange formats -- Information interchange -- Representation of dates and times).",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:gyldighetstidspunkt"
         }, {
           "name" : "opphoerstidspunkt",
           "type" : [ "null", "string" ],
+          "doc" : "en kombinasjon av typene Dato og Klokkeslett. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data\n        elements and interchange formats -- Information interchange -- Representation of dates and times).",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:opphoerstidspunkt"
         }, {
           "name" : "foedselsinstitusjonsnavn",
           "type" : [ "null", "string" ],
+          "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:foedselsinstitusjonsnavn"
         }, {
@@ -921,36 +1029,43 @@
         "fields" : [ {
           "name" : "ajourholdstidspunkt",
           "type" : [ "null", "string" ],
+          "doc" : "en kombinasjon av typene Dato og Klokkeslett. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data\n        elements and interchange formats -- Information interchange -- Representation of dates and times).",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:ajourholdstidspunkt"
         }, {
           "name" : "erGjeldende",
           "type" : [ "null", "boolean" ],
+          "doc" : "angir verdien sann eller usann",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:erGjeldende"
         }, {
           "name" : "kilde",
           "type" : [ "null", "string" ],
+          "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:kilde"
         }, {
           "name" : "aarsak",
           "type" : [ "null", "string" ],
+          "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:aarsak"
         }, {
           "name" : "gyldighetstidspunkt",
           "type" : [ "null", "string" ],
+          "doc" : "en kombinasjon av typene Dato og Klokkeslett. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data\n        elements and interchange formats -- Information interchange -- Representation of dates and times).",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:gyldighetstidspunkt"
         }, {
           "name" : "opphoerstidspunkt",
           "type" : [ "null", "string" ],
+          "doc" : "en kombinasjon av typene Dato og Klokkeslett. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data\n        elements and interchange formats -- Information interchange -- Representation of dates and times).",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:opphoerstidspunkt"
         }, {
           "name" : "relatertPerson",
           "type" : [ "null", "string" ],
+          "doc" : "ellevesifret identifikasjonsnummer for personer bosatt i Norge, der de seks første sifrene angir fødselsdato og de fem siste\n        personnummer.",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:relatertPerson"
         }, {
@@ -961,10 +1076,12 @@
             "fields" : [ {
               "name" : "navn",
               "type" : "Personnavn",
+              "doc" : "navn på person",
               "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:navn"
             }, {
               "name" : "foedselsdato",
               "type" : [ "null", "string" ],
+              "doc" : "gir verdier for år, måned og dag. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data elements\n        and interchange formats -- Information interchange -- Representation of dates and times).\n        Eksempel : 1998-12-21 eller 19981221.",
               "default" : null,
               "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:foedselsdato"
             }, {
@@ -1005,31 +1122,37 @@
         "fields" : [ {
           "name" : "ajourholdstidspunkt",
           "type" : [ "null", "string" ],
+          "doc" : "en kombinasjon av typene Dato og Klokkeslett. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data\n        elements and interchange formats -- Information interchange -- Representation of dates and times).",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:ajourholdstidspunkt"
         }, {
           "name" : "erGjeldende",
           "type" : [ "null", "boolean" ],
+          "doc" : "angir verdien sann eller usann",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:erGjeldende"
         }, {
           "name" : "kilde",
           "type" : [ "null", "string" ],
+          "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:kilde"
         }, {
           "name" : "aarsak",
           "type" : [ "null", "string" ],
+          "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:aarsak"
         }, {
           "name" : "gyldighetstidspunkt",
           "type" : [ "null", "string" ],
+          "doc" : "en kombinasjon av typene Dato og Klokkeslett. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data\n        elements and interchange formats -- Information interchange -- Representation of dates and times).",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:gyldighetstidspunkt"
         }, {
           "name" : "opphoerstidspunkt",
           "type" : [ "null", "string" ],
+          "doc" : "en kombinasjon av typene Dato og Klokkeslett. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data\n        elements and interchange formats -- Information interchange -- Representation of dates and times).",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:opphoerstidspunkt"
         }, {
@@ -1039,11 +1162,13 @@
         }, {
           "name" : "sivilstandsdato",
           "type" : [ "null", "string" ],
+          "doc" : "gir verdier for år, måned og dag. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data elements\n        and interchange formats -- Information interchange -- Representation of dates and times).\n        Eksempel : 1998-12-21 eller 19981221.",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:sivilstandsdato"
         }, {
           "name" : "myndighet",
           "type" : [ "null", "string" ],
+          "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:myndighet"
         }, {
@@ -1054,6 +1179,7 @@
         }, {
           "name" : "sted",
           "type" : [ "null", "string" ],
+          "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:sted"
         }, {
@@ -1064,6 +1190,7 @@
         }, {
           "name" : "relatertVedSivilstand",
           "type" : [ "null", "string" ],
+          "doc" : "ellevesifret identifikasjonsnummer for personer bosatt i Norge, der de seks første sifrene angir fødselsdato og de fem siste\n        personnummer.",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:relatertVedSivilstand"
         } ]
@@ -1079,36 +1206,43 @@
       "fields" : [ {
         "name" : "ajourholdstidspunkt",
         "type" : [ "null", "string" ],
+        "doc" : "en kombinasjon av typene Dato og Klokkeslett. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data\n        elements and interchange formats -- Information interchange -- Representation of dates and times).",
         "default" : null,
         "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:ajourholdstidspunkt"
       }, {
         "name" : "erGjeldende",
         "type" : [ "null", "boolean" ],
+        "doc" : "angir verdien sann eller usann",
         "default" : null,
         "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:erGjeldende"
       }, {
         "name" : "kilde",
         "type" : [ "null", "string" ],
+        "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
         "default" : null,
         "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:kilde"
       }, {
         "name" : "aarsak",
         "type" : [ "null", "string" ],
+        "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
         "default" : null,
         "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:aarsak"
       }, {
         "name" : "gyldighetstidspunkt",
         "type" : [ "null", "string" ],
+        "doc" : "en kombinasjon av typene Dato og Klokkeslett. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data\n        elements and interchange formats -- Information interchange -- Representation of dates and times).",
         "default" : null,
         "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:gyldighetstidspunkt"
       }, {
         "name" : "opphoerstidspunkt",
         "type" : [ "null", "string" ],
+        "doc" : "en kombinasjon av typene Dato og Klokkeslett. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data\n        elements and interchange formats -- Information interchange -- Representation of dates and times).",
         "default" : null,
         "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:opphoerstidspunkt"
       }, {
         "name" : "doedsdato",
         "type" : [ "null", "string" ],
+        "doc" : "gir verdier for år, måned og dag. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data elements\n        and interchange formats -- Information interchange -- Representation of dates and times).\n        Eksempel : 1998-12-21 eller 19981221.",
         "default" : null,
         "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:doedsdato"
       } ]
@@ -1125,54 +1259,65 @@
         "fields" : [ {
           "name" : "ajourholdstidspunkt",
           "type" : [ "null", "string" ],
+          "doc" : "en kombinasjon av typene Dato og Klokkeslett. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data\n        elements and interchange formats -- Information interchange -- Representation of dates and times).",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:ajourholdstidspunkt"
         }, {
           "name" : "erGjeldende",
           "type" : [ "null", "boolean" ],
+          "doc" : "angir verdien sann eller usann",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:erGjeldende"
         }, {
           "name" : "kilde",
           "type" : [ "null", "string" ],
+          "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:kilde"
         }, {
           "name" : "aarsak",
           "type" : [ "null", "string" ],
+          "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:aarsak"
         }, {
           "name" : "gyldighetstidspunkt",
           "type" : [ "null", "string" ],
+          "doc" : "en kombinasjon av typene Dato og Klokkeslett. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data\n        elements and interchange formats -- Information interchange -- Representation of dates and times).",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:gyldighetstidspunkt"
         }, {
           "name" : "opphoerstidspunkt",
           "type" : [ "null", "string" ],
+          "doc" : "en kombinasjon av typene Dato og Klokkeslett. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data\n        elements and interchange formats -- Information interchange -- Representation of dates and times).",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:opphoerstidspunkt"
         }, {
           "name" : "fornavn",
           "type" : "string",
+          "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:fornavn"
         }, {
           "name" : "mellomnavn",
           "type" : [ "null", "string" ],
+          "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:mellomnavn"
         }, {
           "name" : "etternavn",
           "type" : "string",
+          "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:etternavn"
         }, {
           "name" : "forkortetNavn",
           "type" : [ "null", "string" ],
+          "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:forkortetNavn"
         }, {
           "name" : "originaltNavn",
           "type" : [ "null", "Personnavn" ],
+          "doc" : "navn på person",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:originaltNavn"
         } ]
@@ -1190,31 +1335,37 @@
         "fields" : [ {
           "name" : "ajourholdstidspunkt",
           "type" : [ "null", "string" ],
+          "doc" : "en kombinasjon av typene Dato og Klokkeslett. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data\n        elements and interchange formats -- Information interchange -- Representation of dates and times).",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:ajourholdstidspunkt"
         }, {
           "name" : "erGjeldende",
           "type" : [ "null", "boolean" ],
+          "doc" : "angir verdien sann eller usann",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:erGjeldende"
         }, {
           "name" : "kilde",
           "type" : [ "null", "string" ],
+          "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:kilde"
         }, {
           "name" : "aarsak",
           "type" : [ "null", "string" ],
+          "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:aarsak"
         }, {
           "name" : "gyldighetstidspunkt",
           "type" : [ "null", "string" ],
+          "doc" : "en kombinasjon av typene Dato og Klokkeslett. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data\n        elements and interchange formats -- Information interchange -- Representation of dates and times).",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:gyldighetstidspunkt"
         }, {
           "name" : "opphoerstidspunkt",
           "type" : [ "null", "string" ],
+          "doc" : "en kombinasjon av typene Dato og Klokkeslett. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data\n        elements and interchange formats -- Information interchange -- Representation of dates and times).",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:opphoerstidspunkt"
         }, {
@@ -1236,31 +1387,37 @@
         "fields" : [ {
           "name" : "ajourholdstidspunkt",
           "type" : [ "null", "string" ],
+          "doc" : "en kombinasjon av typene Dato og Klokkeslett. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data\n        elements and interchange formats -- Information interchange -- Representation of dates and times).",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:ajourholdstidspunkt"
         }, {
           "name" : "erGjeldende",
           "type" : [ "null", "boolean" ],
+          "doc" : "angir verdien sann eller usann",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:erGjeldende"
         }, {
           "name" : "kilde",
           "type" : [ "null", "string" ],
+          "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:kilde"
         }, {
           "name" : "aarsak",
           "type" : [ "null", "string" ],
+          "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:aarsak"
         }, {
           "name" : "gyldighetstidspunkt",
           "type" : [ "null", "string" ],
+          "doc" : "en kombinasjon av typene Dato og Klokkeslett. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data\n        elements and interchange formats -- Information interchange -- Representation of dates and times).",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:gyldighetstidspunkt"
         }, {
           "name" : "opphoerstidspunkt",
           "type" : [ "null", "string" ],
+          "doc" : "en kombinasjon av typene Dato og Klokkeslett. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data\n        elements and interchange formats -- Information interchange -- Representation of dates and times).",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:opphoerstidspunkt"
         }, {
@@ -1295,6 +1452,7 @@
         }, {
           "name" : "flyttedato",
           "type" : [ "null", "string" ],
+          "doc" : "gir verdier for år, måned og dag. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data elements\n        and interchange formats -- Information interchange -- Representation of dates and times).\n        Eksempel : 1998-12-21 eller 19981221.",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:flyttedato"
         }, {
@@ -1332,21 +1490,25 @@
         "fields" : [ {
           "name" : "ajourholdstidspunkt",
           "type" : [ "null", "string" ],
+          "doc" : "en kombinasjon av typene Dato og Klokkeslett. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data\n        elements and interchange formats -- Information interchange -- Representation of dates and times).",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:ajourholdstidspunkt"
         }, {
           "name" : "erGjeldende",
           "type" : [ "null", "boolean" ],
+          "doc" : "angir verdien sann eller usann",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:erGjeldende"
         }, {
           "name" : "kilde",
           "type" : [ "null", "string" ],
+          "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:kilde"
         }, {
           "name" : "aarsak",
           "type" : [ "null", "string" ],
+          "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:aarsak"
         }, {
@@ -1357,51 +1519,61 @@
             "fields" : [ {
               "name" : "coAdressenavn",
               "type" : [ "null", "string" ],
+              "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
               "default" : null,
               "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:coAdressenavn"
             }, {
               "name" : "adressenavn",
               "type" : [ "null", "string" ],
+              "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
               "default" : null,
               "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:adressenavn"
             }, {
               "name" : "bygning",
               "type" : [ "null", "string" ],
+              "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
               "default" : null,
               "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:bygning"
             }, {
               "name" : "etasjenummer",
               "type" : [ "null", "string" ],
+              "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
               "default" : null,
               "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:etasjenummer"
             }, {
               "name" : "boenhet",
               "type" : [ "null", "string" ],
+              "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
               "default" : null,
               "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:boenhet"
             }, {
               "name" : "postboks",
               "type" : [ "null", "string" ],
+              "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
               "default" : null,
               "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:postboks"
             }, {
               "name" : "postkode",
               "type" : [ "null", "string" ],
+              "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
               "default" : null,
               "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:postkode"
             }, {
               "name" : "byEllerStedsnavn",
               "type" : [ "null", "string" ],
+              "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
               "default" : null,
               "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:byEllerStedsnavn"
             }, {
               "name" : "distriktsnavn",
               "type" : [ "null", "string" ],
+              "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
               "default" : null,
               "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:distriktsnavn"
             }, {
               "name" : "region",
               "type" : [ "null", "string" ],
+              "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
               "default" : null,
               "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:region"
             }, {
@@ -1415,6 +1587,7 @@
         }, {
           "name" : "adressenErUkjent",
           "type" : [ "null", "boolean" ],
+          "doc" : "angir verdien sann eller usann",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:adressenErUkjent"
         }, {
@@ -1439,6 +1612,7 @@
         }, {
           "name" : "oppholdsadressedato",
           "type" : [ "null", "string" ],
+          "doc" : "gir verdier for år, måned og dag. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data elements\n        and interchange formats -- Information interchange -- Representation of dates and times).\n        Eksempel : 1998-12-21 eller 19981221.",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:oppholdsadressedato"
         }, {
@@ -1461,31 +1635,37 @@
         "fields" : [ {
           "name" : "ajourholdstidspunkt",
           "type" : [ "null", "string" ],
+          "doc" : "en kombinasjon av typene Dato og Klokkeslett. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data\n        elements and interchange formats -- Information interchange -- Representation of dates and times).",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:ajourholdstidspunkt"
         }, {
           "name" : "erGjeldende",
           "type" : [ "null", "boolean" ],
+          "doc" : "angir verdien sann eller usann",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:erGjeldende"
         }, {
           "name" : "kilde",
           "type" : [ "null", "string" ],
+          "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:kilde"
         }, {
           "name" : "aarsak",
           "type" : [ "null", "string" ],
+          "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:aarsak"
         }, {
           "name" : "gyldighetstidspunkt",
           "type" : [ "null", "string" ],
+          "doc" : "en kombinasjon av typene Dato og Klokkeslett. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data\n        elements and interchange formats -- Information interchange -- Representation of dates and times).",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:gyldighetstidspunkt"
         }, {
           "name" : "opphoerstidspunkt",
           "type" : [ "null", "string" ],
+          "doc" : "en kombinasjon av typene Dato og Klokkeslett. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data\n        elements and interchange formats -- Information interchange -- Representation of dates and times).",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:opphoerstidspunkt"
         }, {
@@ -1496,6 +1676,7 @@
         }, {
           "name" : "fraflyttingsstedIUtlandet",
           "type" : [ "null", "string" ],
+          "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:fraflyttingsstedIUtlandet"
         } ]
@@ -1513,31 +1694,37 @@
         "fields" : [ {
           "name" : "ajourholdstidspunkt",
           "type" : [ "null", "string" ],
+          "doc" : "en kombinasjon av typene Dato og Klokkeslett. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data\n        elements and interchange formats -- Information interchange -- Representation of dates and times).",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:ajourholdstidspunkt"
         }, {
           "name" : "erGjeldende",
           "type" : [ "null", "boolean" ],
+          "doc" : "angir verdien sann eller usann",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:erGjeldende"
         }, {
           "name" : "kilde",
           "type" : [ "null", "string" ],
+          "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:kilde"
         }, {
           "name" : "aarsak",
           "type" : [ "null", "string" ],
+          "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:aarsak"
         }, {
           "name" : "gyldighetstidspunkt",
           "type" : [ "null", "string" ],
+          "doc" : "en kombinasjon av typene Dato og Klokkeslett. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data\n        elements and interchange formats -- Information interchange -- Representation of dates and times).",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:gyldighetstidspunkt"
         }, {
           "name" : "opphoerstidspunkt",
           "type" : [ "null", "string" ],
+          "doc" : "en kombinasjon av typene Dato og Klokkeslett. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data\n        elements and interchange formats -- Information interchange -- Representation of dates and times).",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:opphoerstidspunkt"
         }, {
@@ -1548,6 +1735,7 @@
         }, {
           "name" : "tilflyttingsstedIUtlandet",
           "type" : [ "null", "string" ],
+          "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:tilflyttingsstedIUtlandet"
         } ]
@@ -1565,31 +1753,37 @@
         "fields" : [ {
           "name" : "ajourholdstidspunkt",
           "type" : [ "null", "string" ],
+          "doc" : "en kombinasjon av typene Dato og Klokkeslett. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data\n        elements and interchange formats -- Information interchange -- Representation of dates and times).",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:ajourholdstidspunkt"
         }, {
           "name" : "erGjeldende",
           "type" : [ "null", "boolean" ],
+          "doc" : "angir verdien sann eller usann",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:erGjeldende"
         }, {
           "name" : "kilde",
           "type" : [ "null", "string" ],
+          "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:kilde"
         }, {
           "name" : "aarsak",
           "type" : [ "null", "string" ],
+          "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:aarsak"
         }, {
           "name" : "gyldighetstidspunkt",
           "type" : [ "null", "string" ],
+          "doc" : "en kombinasjon av typene Dato og Klokkeslett. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data\n        elements and interchange formats -- Information interchange -- Representation of dates and times).",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:gyldighetstidspunkt"
         }, {
           "name" : "opphoerstidspunkt",
           "type" : [ "null", "string" ],
+          "doc" : "en kombinasjon av typene Dato og Klokkeslett. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data\n        elements and interchange formats -- Information interchange -- Representation of dates and times).",
           "default" : null,
           "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:opphoerstidspunkt"
         }, {
