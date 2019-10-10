@@ -5,14 +5,6 @@ Convert folkeregister xml rawdata to [Parquet](https://en.wikipedia.org/wiki/Apa
 It is recommended that you work with this repo via the [rawdata-converter-project](https://github.com/statisticsnorway/rawdata-converter-project).
 
 
-## Prerequisites
-
-There are certain dependencies that you will need to have installed in your local
-maven repo (since they haven't been released yet):
-
-* [transform-to-parquet](https://github.com/statisticsnorway/transform-to-parquet)
-
-
 ## Development
 
 ### Running from within an IDEA
