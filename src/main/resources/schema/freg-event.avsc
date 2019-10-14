@@ -61,6 +61,18 @@
                   "default" : null,
                   "source" : "element folkeregisteret:tilgjengeliggjoering:hendelse:v1:aarsak"
                 }, {
+                  "name" : "gyldighetstidspunkt",
+                  "type" : [ "null", "string" ],
+                  "doc" : "en kombinasjon av typene Dato og Klokkeslett. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data\n        elements and interchange formats -- Information interchange -- Representation of dates and times).",
+                  "default" : null,
+                  "source" : "element folkeregisteret:tilgjengeliggjoering:hendelse:v1:gyldighetstidspunkt"
+                }, {
+                  "name" : "opphoerstidspunkt",
+                  "type" : [ "null", "string" ],
+                  "doc" : "en kombinasjon av typene Dato og Klokkeslett. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data\n        elements and interchange formats -- Information interchange -- Representation of dates and times).",
+                  "default" : null,
+                  "source" : "element folkeregisteret:tilgjengeliggjoering:hendelse:v1:opphoerstidspunkt"
+                }, {
                   "name" : "rettIdentitetVedOpplysninger",
                   "type" : [ "null", {
                     "type" : "record",
@@ -410,6 +422,18 @@
                   "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
                   "default" : null,
                   "source" : "element folkeregisteret:tilgjengeliggjoering:hendelse:v1:aarsak"
+                }, {
+                  "name" : "gyldighetstidspunkt",
+                  "type" : [ "null", "string" ],
+                  "doc" : "en kombinasjon av typene Dato og Klokkeslett. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data\n        elements and interchange formats -- Information interchange -- Representation of dates and times).",
+                  "default" : null,
+                  "source" : "element folkeregisteret:tilgjengeliggjoering:hendelse:v1:gyldighetstidspunkt"
+                }, {
+                  "name" : "opphoerstidspunkt",
+                  "type" : [ "null", "string" ],
+                  "doc" : "en kombinasjon av typene Dato og Klokkeslett. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data\n        elements and interchange formats -- Information interchange -- Representation of dates and times).",
+                  "default" : null,
+                  "source" : "element folkeregisteret:tilgjengeliggjoering:hendelse:v1:opphoerstidspunkt"
                 }, {
                   "name" : "identifikasjonsdokumentnummer",
                   "type" : [ "null", "string" ],
@@ -1660,6 +1684,230 @@
               } ],
               "default" : null,
               "source" : "element folkeregisteret:tilgjengeliggjoering:hendelse:v1:brukAvSamiskSpraak"
+            }, {
+              "name" : "postadresse",
+              "type" : [ "null", {
+                "type" : "record",
+                "name" : "Kontaktadresse",
+                "fields" : [ {
+                  "name" : "ajourholdstidspunkt",
+                  "type" : [ "null", "string" ],
+                  "doc" : "en kombinasjon av typene Dato og Klokkeslett. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data\n        elements and interchange formats -- Information interchange -- Representation of dates and times).",
+                  "default" : null,
+                  "source" : "element folkeregisteret:tilgjengeliggjoering:hendelse:v1:ajourholdstidspunkt"
+                }, {
+                  "name" : "kilde",
+                  "type" : [ "null", "string" ],
+                  "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
+                  "default" : null,
+                  "source" : "element folkeregisteret:tilgjengeliggjoering:hendelse:v1:kilde"
+                }, {
+                  "name" : "aarsak",
+                  "type" : [ "null", "string" ],
+                  "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
+                  "default" : null,
+                  "source" : "element folkeregisteret:tilgjengeliggjoering:hendelse:v1:aarsak"
+                }, {
+                  "name" : "gyldighetstidspunkt",
+                  "type" : [ "null", "string" ],
+                  "doc" : "en kombinasjon av typene Dato og Klokkeslett. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data\n        elements and interchange formats -- Information interchange -- Representation of dates and times).",
+                  "default" : null,
+                  "source" : "element folkeregisteret:tilgjengeliggjoering:hendelse:v1:gyldighetstidspunkt"
+                }, {
+                  "name" : "opphoerstidspunkt",
+                  "type" : [ "null", "string" ],
+                  "doc" : "en kombinasjon av typene Dato og Klokkeslett. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data\n        elements and interchange formats -- Information interchange -- Representation of dates and times).",
+                  "default" : null,
+                  "source" : "element folkeregisteret:tilgjengeliggjoering:hendelse:v1:opphoerstidspunkt"
+                }, {
+                  "name" : "adressegradering",
+                  "type" : [ "null", "string" ],
+                  "default" : null,
+                  "source" : "element folkeregisteret:tilgjengeliggjoering:hendelse:v1:adressegradering"
+                }, {
+                  "name" : "postboksadresse",
+                  "type" : [ "null", {
+                    "type" : "record",
+                    "name" : "Postboksadresse",
+                    "fields" : [ {
+                      "name" : "postbokseier",
+                      "type" : [ "null", "string" ],
+                      "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
+                      "default" : null,
+                      "source" : "element folkeregisteret:tilgjengeliggjoering:hendelse:v1:postbokseier"
+                    }, {
+                      "name" : "postboks",
+                      "type" : [ "null", "string" ],
+                      "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
+                      "default" : null,
+                      "source" : "element folkeregisteret:tilgjengeliggjoering:hendelse:v1:postboks"
+                    }, {
+                      "name" : "poststed",
+                      "type" : [ "null", "Poststed" ],
+                      "default" : null,
+                      "source" : "element folkeregisteret:tilgjengeliggjoering:hendelse:v1:poststed"
+                    } ]
+                  } ],
+                  "default" : null,
+                  "source" : "element folkeregisteret:tilgjengeliggjoering:hendelse:v1:postboksadresse"
+                }, {
+                  "name" : "vegadresse",
+                  "type" : [ "null", {
+                    "type" : "record",
+                    "name" : "VegadresseForPost",
+                    "fields" : [ {
+                      "name" : "coAdressenavn",
+                      "type" : [ "null", "string" ],
+                      "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
+                      "default" : null,
+                      "source" : "element folkeregisteret:tilgjengeliggjoering:hendelse:v1:coAdressenavn"
+                    }, {
+                      "name" : "adressenavn",
+                      "type" : "string",
+                      "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
+                      "source" : "element folkeregisteret:tilgjengeliggjoering:hendelse:v1:adressenavn"
+                    }, {
+                      "name" : "adressenummer",
+                      "type" : [ "null", "Adressenummer" ],
+                      "default" : null,
+                      "source" : "element folkeregisteret:tilgjengeliggjoering:hendelse:v1:adressenummer"
+                    }, {
+                      "name" : "poststed",
+                      "type" : [ "null", "Poststed" ],
+                      "default" : null,
+                      "source" : "element folkeregisteret:tilgjengeliggjoering:hendelse:v1:poststed"
+                    }, {
+                      "name" : "adressekode",
+                      "type" : [ "null", "string" ],
+                      "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
+                      "default" : null,
+                      "source" : "element folkeregisteret:tilgjengeliggjoering:hendelse:v1:adressekode"
+                    }, {
+                      "name" : "adressetilleggsnavn",
+                      "type" : [ "null", "string" ],
+                      "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
+                      "default" : null,
+                      "source" : "element folkeregisteret:tilgjengeliggjoering:hendelse:v1:adressetilleggsnavn"
+                    }, {
+                      "name" : "bruksenhetsnummer",
+                      "type" : [ "null", "string" ],
+                      "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
+                      "default" : null,
+                      "source" : "element folkeregisteret:tilgjengeliggjoering:hendelse:v1:bruksenhetsnummer"
+                    } ]
+                  } ],
+                  "default" : null,
+                  "source" : "element folkeregisteret:tilgjengeliggjoering:hendelse:v1:vegadresse"
+                }, {
+                  "name" : "postadresseIFrittFormat",
+                  "type" : [ "null", {
+                    "type" : "record",
+                    "name" : "PostadresseIFrittFormat",
+                    "fields" : [ {
+                      "name" : "adresselinje",
+                      "type" : [ "null", {
+                        "type" : "array",
+                        "items" : "string"
+                      } ],
+                      "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
+                      "default" : null,
+                      "source" : "element folkeregisteret:tilgjengeliggjoering:hendelse:v1:adresselinje"
+                    }, {
+                      "name" : "poststed",
+                      "type" : [ "null", "Poststed" ],
+                      "default" : null,
+                      "source" : "element folkeregisteret:tilgjengeliggjoering:hendelse:v1:poststed"
+                    } ]
+                  } ],
+                  "default" : null,
+                  "source" : "element folkeregisteret:tilgjengeliggjoering:hendelse:v1:postadresseIFrittFormat"
+                }, {
+                  "name" : "adresseIdentifikatorFraMatrikkelen",
+                  "type" : [ "null", "string" ],
+                  "default" : null,
+                  "source" : "element folkeregisteret:tilgjengeliggjoering:hendelse:v1:adresseIdentifikatorFraMatrikkelen"
+                } ]
+              } ],
+              "default" : null,
+              "source" : "element folkeregisteret:tilgjengeliggjoering:hendelse:v1:postadresse"
+            }, {
+              "name" : "postadresseIUtlandet",
+              "type" : [ "null", {
+                "type" : "record",
+                "name" : "KontaktadresseIUtlandet",
+                "fields" : [ {
+                  "name" : "ajourholdstidspunkt",
+                  "type" : [ "null", "string" ],
+                  "doc" : "en kombinasjon av typene Dato og Klokkeslett. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data\n        elements and interchange formats -- Information interchange -- Representation of dates and times).",
+                  "default" : null,
+                  "source" : "element folkeregisteret:tilgjengeliggjoering:hendelse:v1:ajourholdstidspunkt"
+                }, {
+                  "name" : "kilde",
+                  "type" : [ "null", "string" ],
+                  "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
+                  "default" : null,
+                  "source" : "element folkeregisteret:tilgjengeliggjoering:hendelse:v1:kilde"
+                }, {
+                  "name" : "aarsak",
+                  "type" : [ "null", "string" ],
+                  "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
+                  "default" : null,
+                  "source" : "element folkeregisteret:tilgjengeliggjoering:hendelse:v1:aarsak"
+                }, {
+                  "name" : "gyldighetstidspunkt",
+                  "type" : [ "null", "string" ],
+                  "doc" : "en kombinasjon av typene Dato og Klokkeslett. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data\n        elements and interchange formats -- Information interchange -- Representation of dates and times).",
+                  "default" : null,
+                  "source" : "element folkeregisteret:tilgjengeliggjoering:hendelse:v1:gyldighetstidspunkt"
+                }, {
+                  "name" : "opphoerstidspunkt",
+                  "type" : [ "null", "string" ],
+                  "doc" : "en kombinasjon av typene Dato og Klokkeslett. Kodes som en tekststreng etter datoformatering spesifisert i ISO 8601 (ISO 8601:2004 Data\n        elements and interchange formats -- Information interchange -- Representation of dates and times).",
+                  "default" : null,
+                  "source" : "element folkeregisteret:tilgjengeliggjoering:hendelse:v1:opphoerstidspunkt"
+                }, {
+                  "name" : "adressegradering",
+                  "type" : [ "null", "string" ],
+                  "default" : null,
+                  "source" : "element folkeregisteret:tilgjengeliggjoering:hendelse:v1:adressegradering"
+                }, {
+                  "name" : "utenlandskAdresseIFrittFormat",
+                  "type" : [ "null", {
+                    "type" : "record",
+                    "name" : "InternasjonalAdresseIFrittFormat",
+                    "fields" : [ {
+                      "name" : "adresselinje",
+                      "type" : [ "null", {
+                        "type" : "array",
+                        "items" : "string"
+                      } ],
+                      "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
+                      "default" : null,
+                      "source" : "element folkeregisteret:tilgjengeliggjoering:hendelse:v1:adresselinje"
+                    }, {
+                      "name" : "postkode",
+                      "type" : [ "null", "string" ],
+                      "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
+                      "default" : null,
+                      "source" : "element folkeregisteret:tilgjengeliggjoering:hendelse:v1:postkode"
+                    }, {
+                      "name" : "byEllerStedsnavn",
+                      "type" : [ "null", "string" ],
+                      "doc" : "vilkårlig lang sekvens av tegn inkludert aksenter og spesielle tegn fra standardiserte tegnsett",
+                      "default" : null,
+                      "source" : "element folkeregisteret:tilgjengeliggjoering:hendelse:v1:byEllerStedsnavn"
+                    }, {
+                      "name" : "landkode",
+                      "type" : "string",
+                      "source" : "element folkeregisteret:tilgjengeliggjoering:hendelse:v1:landkode"
+                    } ]
+                  } ],
+                  "default" : null,
+                  "source" : "element folkeregisteret:tilgjengeliggjoering:hendelse:v1:utenlandskAdresseIFrittFormat"
+                } ]
+              } ],
+              "default" : null,
+              "source" : "element folkeregisteret:tilgjengeliggjoering:hendelse:v1:postadresseIUtlandet"
             }, {
               "name" : "entitet",
               "type" : "string",
