@@ -50,13 +50,21 @@ public class FregRawdataConverter extends AbstractRawdataConverter {
         FregItem fregItem = FregItem.from(rawdataMessage);
 
         if (fregItem.hasPerson()) {
-            xmlToAvro(fregItem.getPersonXml(), ELEMENT_NAME_FREG_PERSON, fregPersonSchema, rootRecordBuilder);
+            try {
+                xmlToAvro(fregItem.getPersonXml(), ELEMENT_NAME_FREG_PERSON, fregPersonSchema, rootRecordBuilder);
+            } catch (Exception e) {
+                log.warn("Failed to convert person xml", e);
+            }
         } else {
             log.error("Missing person data for freg item {}", fregItem.toIdString());
         }
 
         if (fregItem.hasEvent()) {
-            xmlToAvro(fregItem.getEventXml(), ELEMENT_NAME_FREG_EVENT, fregEventSchema, rootRecordBuilder);
+            try {
+                xmlToAvro(fregItem.getEventXml(), ELEMENT_NAME_FREG_EVENT, fregEventSchema, rootRecordBuilder);
+            } catch (Exception e) {
+                log.warn("Failed to convert event xml", e);
+            }
         } else {
             log.error("Missing event data for freg item {}", fregItem.toIdString());
         }
