@@ -23,7 +23,7 @@ public class FregPublisherTest {
 
     /** Can be used to populate the rawdata storage with some test data. */
     @Test
-    @Disabled @SuppressWarnings("squid:S1607")
+    @Disabled @SuppressWarnings({"squid:S1607", "squid:S2699"})
     public void publishLocalFregData() throws Exception {
         DynamicConfiguration configuration = configuration();
         String rawdataFregFiles = configuration.evaluateToString("test.rawdata.freg.files");
