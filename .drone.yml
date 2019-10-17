@@ -65,6 +65,20 @@ steps:
     depends_on:
       - sonarqube
 
+  - name: publish-docker
+    image: plugins/gcr
+    settings:
+      repo: prod-bip/rawdata-converter-app-freg
+      registry: eu.gcr.io
+      tags: "${DRONE_BRANCH}-${DRONE_COMMIT_SHA:0:8}"
+      json_key:
+        from_secret: gcr_credentials
+    when:
+      branch:
+        - master
+      event:
+        - push
+
   - name: slack
     image: plugins/slack
     settings:
@@ -89,15 +103,24 @@ name: slack_webhook_url
 get:
   path: drone-slack-webhook-url
   name: slack-webhook-url
+
 ---
 kind: secret
 name: sonar_host
 get:
   path: drone-sonarqube-configuration
   name: url
+
 ---
 kind: secret
 name: sonar_token
 get:
   path: drone-sonarqube-configuration
   name: token
+
+---
+kind: secret
+name: gcr_credentials
+get:
+  path: drone-gcr-credentials
+  name: gcr-credentials
