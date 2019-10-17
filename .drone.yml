@@ -78,6 +78,8 @@ steps:
         - master
       event:
         - push
+    depends_on:
+      - sonarqube
 
   - name: slack
     image: plugins/slack
