@@ -28,3 +28,18 @@ run-local                      Run the app locally (without docker)
 release-dryrun                 Simulate a release in order to detect any issues
 release                        Release a new version. Update POMs and tag the new version in git. Drone deploys upon tag detection.
 ```
+
+
+## Deployment
+
+The app checks the `DEPLOYMENT_ENV` variable to determine environment specific
+configuration. Non-sensitive, environment specific configuration are defined
+in the `application-${DEPLOYMENT_ENV}.properties` file that are bundled into
+the app jar.
+
+In addition, the following environment variables must be defined:
+```
+RAWDATA_CLIENT_POSTGRES_DRIVER_USER
+RAWDATA_CLIENT_POSTGRES_DRIVER_PASSWORD
+RAWDATA_CLIENT_POSTGRES_DRIVER_DATABASE
+```
