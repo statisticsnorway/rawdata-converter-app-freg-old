@@ -54,17 +54,22 @@
     <dependency>
       <groupId>no.ssb.rawdata</groupId>
       <artifactId>rawdata-client-provider-postgres</artifactId>
-      <version>0.4</version>
+      <version>0.7</version>
     </dependency>
     <dependency>
-      <groupId>no.ssb.lds.data</groupId>
-      <artifactId>lds-data-client</artifactId>
-      <version>0.0.4</version>
+      <groupId>no.ssb.rawdata</groupId>
+      <artifactId>rawdata-client-provider-gcs</artifactId>
+      <version>0.2</version>
+    </dependency>
+    <dependency>
+      <groupId>com.google.guava</groupId>
+      <artifactId>guava</artifactId>
+      <version>28.1-jre</version>
     </dependency>
     <dependency>
       <groupId>no.ssb.spi</groupId>
       <artifactId>service-provider-api</artifactId>
-      <version>0.3</version>
+      <version>0.4</version>
     </dependency>
     <dependency>
       <groupId>no.ssb.avro.convert.xml</groupId>
