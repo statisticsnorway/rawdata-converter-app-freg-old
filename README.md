@@ -37,9 +37,11 @@ configuration. Non-sensitive, environment specific configuration are defined
 in the `application-${DEPLOYMENT_ENV}.properties` file that are bundled into
 the app jar.
 
-In addition, the following environment variables must be defined:
+If conversion results are to be stored to GCS, you will need to supply the
+`GOOGLE_APPLICATION_CREDENTIALS` environment variable that points to a
+json-file with the service account key with write access to the supplied GCS
+bucket.
+
 ```
-RAWDATA_CLIENT_POSTGRES_DRIVER_USER
-RAWDATA_CLIENT_POSTGRES_DRIVER_PASSWORD
-RAWDATA_CLIENT_POSTGRES_DRIVER_DATABASE
+GOOGLE_APPLICATION_CREDENTIALS=/path/to/service-account-key.json
 ```
