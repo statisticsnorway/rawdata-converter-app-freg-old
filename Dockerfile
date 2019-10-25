@@ -3,4 +3,4 @@ CMD mvn -B clean install -DskipTests
 COPY target/rawdata-converter-*.jar rawdata-converter.jar
 VOLUME ["/run/ssb/secrets"]
 EXPOSE 8080
-CMD java -Dcom.sun.management.jmxremote -noverify ${JAVA_OPTS} -Dmicronaut.environments=${DEPLOYMENT_ENV} -Dmicronaut.config.files="/conf/application.properties" -jar rawdata-converter.jar
+CMD java -Dcom.sun.management.jmxremote -noverify ${JAVA_OPTS} -Dmicronaut.environments=staging_bip -Dmicronaut.config.files="/conf/application.properties" -jar rawdata-converter.jar
