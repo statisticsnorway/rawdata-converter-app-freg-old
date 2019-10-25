@@ -12,11 +12,11 @@ steps:
       profiles:
         - id: ssb-bip
           repositories:
-            - id: ssb-bip-releases
-              url: https://nexus.prod-bip-ci.ssb.no/repository/maven-releases/
-              layout: default
             - id: ssb-bip-snapshots
               url: https://nexus.prod-bip-ci.ssb.no/repository/maven-snapshots/
+              layout: default
+            - id: ssb-bip-releases
+              url: https://nexus.prod-bip-ci.ssb.no/repository/maven-releases/
               layout: default
 
   - name: build
