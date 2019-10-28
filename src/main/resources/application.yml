@@ -1,6 +1,7 @@
 micronaut:
   application.name: rawdata-converter-app-freg
   server.port: 8080
+
 endpoints:
   all:
     sensitive: false
