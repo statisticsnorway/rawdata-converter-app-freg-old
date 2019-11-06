@@ -43,7 +43,7 @@
     <dependency>
       <groupId>no.ssb.rawdata.converter</groupId>
       <artifactId>rawdata-converter-core</artifactId>
-      <version>0.0.6-SNAPSHOT</version>
+      <version>0.0.7</version>
     </dependency>
     <dependency>
       <groupId>org.projectlombok</groupId>
@@ -90,10 +90,6 @@
     <dependency>
       <groupId>io.micronaut.configuration</groupId>
       <artifactId>micronaut-micrometer-core</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>io.micronaut.configuration</groupId>
-      <artifactId>micronaut-micrometer-registry-prometheus</artifactId>
     </dependency>
     <dependency>
       <groupId>org.junit.jupiter</groupId>
