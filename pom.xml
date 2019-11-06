@@ -43,7 +43,7 @@
     <dependency>
       <groupId>no.ssb.rawdata.converter</groupId>
       <artifactId>rawdata-converter-core</artifactId>
-      <version>0.0.7</version>
+      <version>0.0.8</version>
     </dependency>
     <dependency>
       <groupId>org.projectlombok</groupId>
@@ -75,6 +75,11 @@
       <groupId>no.ssb.avro.convert.xml</groupId>
       <artifactId>avro-buddy-xml</artifactId>
       <version>0.0.1</version>
+    </dependency>
+    <dependency>
+      <groupId>net.logstash.logback</groupId>
+      <artifactId>logstash-logback-encoder</artifactId>
+      <version>6.2</version>
     </dependency>
     <dependency>
       <groupId>ch.qos.logback</groupId>
