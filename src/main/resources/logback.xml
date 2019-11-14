@@ -2,9 +2,6 @@
 
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <encoder class="net.logstash.logback.encoder.LogstashEncoder">
-            <fieldNames>
-                <timestamp>time</timestamp>
-            </fieldNames>
             <timeZone>UTC</timeZone>
         </encoder>
     </appender>
