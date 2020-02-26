@@ -52,7 +52,7 @@ public class FregRawdataConverter extends AbstractRawdataConverter {
 
         ConversionResultBuilder resultBuilder = new ConversionResultBuilder(new GenericRecordBuilder(aggregateSchema));
 
-        FregItem fregItem = FregItem.from(rawdataMessage, this::tryDecryptContent);
+        FregItem fregItem = FregItem.from(rawdataMessage);
 
         if (fregItem.hasPerson()) {
             try {

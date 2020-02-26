@@ -5,8 +5,6 @@ import lombok.Builder;
 import lombok.Value;
 import no.ssb.rawdata.api.RawdataMessage;
 
-import java.util.function.Function;
-
 @Builder
 @Value
 public class FregItem {
@@ -16,13 +14,13 @@ public class FregItem {
     private byte[] personXml;
     private byte[] metadataJson;
 
-    public static FregItem from(RawdataMessage rawdataMessage, Function<byte[], byte[]> tryDecryptContent) {
+    public static FregItem from(RawdataMessage rawdataMessage) {
         return FregItem.builder()
                 .ulid(rawdataMessage.ulid())
                 .position(rawdataMessage.position())
-                .eventXml(tryDecryptContent.apply(rawdataMessage.get("event")))
-                .personXml(tryDecryptContent.apply(rawdataMessage.get("person")))
-                .metadataJson(tryDecryptContent.apply(rawdataMessage.get("manifest.json")))
+                .eventXml(rawdataMessage.get("event"))
+                .personXml(rawdataMessage.get("person"))
+                .metadataJson(rawdataMessage.get("manifest.json"))
                 .build();
     }
 
