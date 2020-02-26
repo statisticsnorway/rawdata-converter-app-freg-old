@@ -15,4 +15,14 @@ public class FregRawdataConverterConfig {
 
     private Optional<String> schemaFileEvent = Optional.empty();
 
+    /**
+     * Rawdata Encryption passphrase for the configured rawdata store
+     */
+    private String rawdataStorageEncryptionKey = "";
+
+    /**
+     * Rawdata Encryption salt for the configured rawdata store
+     */
+    private String rawdataStorageEncryptionSalt = "";
+
 }

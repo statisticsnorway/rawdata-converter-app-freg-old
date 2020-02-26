@@ -31,6 +31,8 @@ public class FregRawdataConverter extends AbstractRawdataConverter {
     private static final String DEFAULT_SCHEMA_FILE_EVENT = "schema/freg-event.avsc";
 
     public FregRawdataConverter(FregRawdataConverterConfig fregConverterConfig) {
+        super(fregConverterConfig.getRawdataStorageEncryptionKey().toCharArray(), fregConverterConfig.getRawdataStorageEncryptionSalt().getBytes());
+
         fregPersonSchema = readAvroSchema(fregConverterConfig.getSchemaFilePerson(), DEFAULT_SCHEMA_FILE_PERSON);
         fregEventSchema = readAvroSchema(fregConverterConfig.getSchemaFileEvent(), DEFAULT_SCHEMA_FILE_EVENT);
         aggregateSchema = new AggregateSchemaBuilder("no.ssb.dataset")
@@ -50,7 +52,7 @@ public class FregRawdataConverter extends AbstractRawdataConverter {
 
         ConversionResultBuilder resultBuilder = new ConversionResultBuilder(new GenericRecordBuilder(aggregateSchema));
 
-        FregItem fregItem = FregItem.from(rawdataMessage);
+        FregItem fregItem = FregItem.from(rawdataMessage, this::tryDecryptContent);
 
         if (fregItem.hasPerson()) {
             try {
