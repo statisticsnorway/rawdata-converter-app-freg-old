@@ -10,26 +10,42 @@ import no.ssb.rawdata.api.RawdataMessage;
 public class FregItem {
     private final ULID.Value ulid;
     private final String position;
-    private byte[] eventXml;
+    private byte[] hendelseXml;
     private byte[] personXml;
-    private byte[] metadataJson;
+    private byte[] manifestJson;
 
     public static FregItem from(RawdataMessage rawdataMessage) {
         return FregItem.builder()
                 .ulid(rawdataMessage.ulid())
                 .position(rawdataMessage.position())
-                .eventXml(rawdataMessage.get("event"))
+                .hendelseXml(rawdataMessage.get("event"))
                 .personXml(rawdataMessage.get("person"))
-                .metadataJson(rawdataMessage.get("manifest.json"))
+                .manifestJson(rawdataMessage.get("manifest.json"))
                 .build();
+    }
+
+    public boolean hasManifestJson() {
+        return manifestJson != null;
+    }
+
+    public String getManifestJsonAsString() {
+        return hasManifestJson() ? new String(manifestJson) : null;
+    }
+
+    public boolean hasHendelse() {
+        return hendelseXml != null;
+    }
+
+    public String getHendelseXmlAsString() {
+        return hasHendelse() ? new String(hendelseXml) : null;
     }
 
     public boolean hasPerson() {
         return personXml != null;
     }
 
-    public boolean hasEvent() {
-        return eventXml != null;
+    public String getPersonXmlAsString() {
+        return hasPerson() ? new String(personXml) : null;
     }
 
     public String toIdString() {

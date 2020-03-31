@@ -1,18 +1,28 @@
 package no.ssb.rawdata.converter.app.freg;
 
+import com.google.common.base.Strings;
 import io.micronaut.context.annotation.ConfigurationProperties;
-import lombok.Value;
-import lombok.extern.slf4j.Slf4j;
+import lombok.Data;
 
-import java.util.Optional;
+import javax.validation.constraints.NotEmpty;
 
 @ConfigurationProperties("rawdata.converter.app.freg")
-@Value
-@Slf4j
+@Data
 public class FregRawdataConverterConfig {
 
-    private Optional<String> schemaFilePerson = Optional.empty();
+    @NotEmpty
+    private String schemaFilePerson;
 
-    private Optional<String> schemaFileEvent = Optional.empty();
+    @NotEmpty
+    private String schemaFileHendelse;
+
+    public String toDebugString() {
+        return debugItem("schema person", schemaFilePerson)
+          + debugItem("schema hendelse", schemaFileHendelse);
+    }
+
+    private String debugItem(String label, Object value) {
+        return Strings.padEnd(label, 24, '.') + " " + value + "\n";
+    }
 
 }

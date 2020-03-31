@@ -1,0 +1,55 @@
+micronaut:
+  application.name: rawdata-converter-freg-person
+  server.port: 28081
+
+endpoints:
+  all:
+    # Uncomment to open all management endpoints - https://docs.micronaut.io/latest/guide/index.html#providedEndpoints
+    sensitive: false
+
+rawdata.client:
+  provider: gcs
+  local-temp-folder: temp
+  avro-file:
+    max.seconds: 3600
+    max.bytes: 10485760
+    sync.interval: 500000
+  gcs:
+    bucket-name: dev-rawdata-store
+    listing.min-interval-seconds: 15
+    service-account.key-file: ../localenv/auth/gcs/dev-bip/gcs_credentials.json
+
+rawdata.encryption:
+    key: SECURE_KMS_TOKEN
+    salt: SALT
+
+rawdata.converter:
+  active-by-default: true
+  storage-type: gcs
+  storage-root: gs://dev-rawdata-store/datastore
+  storage-path: /kilde/ske/freg/person/rådata/v123
+  storage-version: 1585640088000
+  topic: freg-playground
+  window-max-records: 1000
+  window-max-time-in-seconds: 60
+  initial-position: FIRST
+  dataset-meta:
+    valuation: INTERNAL
+    type: UNBOUNDED
+  pseudo:
+    config:
+      debug: true
+      var-funcs:
+        personidentifikator: fpe-fnr(secret1)
+    secrets:
+      repo:
+        secret1:
+          content: C5sn7B4YtwcilAwuVx6NuAsMWLusOSA/ldia40ZugDI=
+          type: AES256
+        secret2:
+          content: CsR1rI/27ejUOSltjQiBDdGeqTY5sy0Af9Tf7E/WYBU=
+          type: AES256
+
+rawdata.converter.app.freg:
+  schema-file-person: schema/freg-person.avsc
+  schema-file-hendelse: schema/freg-hendelse.avsc

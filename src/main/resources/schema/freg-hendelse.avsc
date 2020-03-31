@@ -1,6 +1,6 @@
 {
   "type" : "record",
-  "namespace": "freg.event",
+  "namespace": "freg.hendelse",
   "name" : "DokumentForHendelse",
   "fields" : [ {
     "name" : "dokumentidentifikator",
