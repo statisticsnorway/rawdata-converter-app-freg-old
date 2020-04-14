@@ -198,3 +198,10 @@ name: gcr_credentials
 get:
   path: drone-gcr-credentials
   name: gcr-credentials
+
+---
+kind: secret
+name: gcs_credentials
+get:
+  path: drone-gcs-credentials
+  name: gcs-credentials
