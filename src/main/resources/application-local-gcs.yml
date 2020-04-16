@@ -37,10 +37,6 @@ rawdata.converter:
     valuation: INTERNAL
     type: UNBOUNDED
   pseudo:
-    config:
-      debug: true
-      var-funcs:
-        personidentifikator: fpe-fnr(secret1)
     secrets:
       repo:
         secret1:
@@ -49,6 +45,12 @@ rawdata.converter:
         secret2:
           content: CsR1rI/27ejUOSltjQiBDdGeqTY5sy0Af9Tf7E/WYBU=
           type: AES256
+    config:
+      debug: true
+      rules:
+        personidentifikator:
+          pattern: '**/personidentifikator'
+          func: fpe-fnr(secret1)
 
 rawdata.converter.app.freg:
   schema-file-person: schema/freg-person.avsc

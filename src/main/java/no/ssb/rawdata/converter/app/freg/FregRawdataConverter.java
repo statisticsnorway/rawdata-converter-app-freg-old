@@ -113,7 +113,7 @@ public class FregRawdataConverter extends AbstractRawdataConverter {
     void xmlToAvro(byte[] xmlData, String rootXmlElementName, Schema schema, ConversionResultBuilder resultBuilder) {
         InputStream xmlInputStream = new ByteArrayInputStream(xmlData);
 
-        try (XmlToRecords xmlToRecords = new XmlToRecords(xmlInputStream, rootXmlElementName, schema, pseudoService::pseudonyimze)) {
+        try (XmlToRecords xmlToRecords = new XmlToRecords(xmlInputStream, rootXmlElementName, schema, pseudoService::pseudonymize)) {
             xmlToRecords.forEach(record ->
               resultBuilder.withRecord(rootXmlElementName, record)
             );
