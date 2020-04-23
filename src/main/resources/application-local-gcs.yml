@@ -15,9 +15,10 @@ rawdata.client:
     max.bytes: 10485760
     sync.interval: 500000
   gcs:
-    bucket-name: dev-rawdata-store
+    bucket-name: ssb-rawdata-dev
     listing.min-interval-seconds: 15
-    service-account.key-file: ../localenv/auth/gcs/dev-bip/gcs_credentials.json
+    credential-provider: service-account
+    service-account.key-file: ../localenv/auth/gcs/dev-sirius/gcs_credentials.json
 
 rawdata.encryption:
     key: SECURE_KMS_TOKEN
@@ -25,10 +26,12 @@ rawdata.encryption:
 
 rawdata.converter:
   active-by-default: true
+  dryrun: true
   storage-type: gcs
-  storage-root: gs://dev-rawdata-store/datastore
+  storage-root: gs://ssb-rawdata-dev/datastore
   storage-path: /kilde/ske/freg/person/rådata/v123
   storage-version: 1585640088000
+  service-account-key-file: ../localenv/auth/gcs/dev-sirius/gcs_credentials.json
   topic: freg-playground
   window-max-records: 1000
   window-max-time-in-seconds: 60
@@ -51,6 +54,22 @@ rawdata.converter:
         personidentifikator:
           pattern: '**/personidentifikator'
           func: fpe-fnr(secret1)
+        folkeregisteridentifikator:
+          pattern: '**/*{f,F}olkeregisteridentifikator'
+          func: fpe-fnr(secret1)
+        familierelasjon:
+          pattern: '**/familierelasjon/{relatertPerson}'
+          func: fpe-fnr(secret1)
+        foedselsEllerDNummer:
+          pattern: '**/foedselsEllerDNummer'
+          func: fpe-fnr(secret1)
+        utenlandskPersonidentifikasjon:
+          pattern: '**/utenlandskPersonidentifikasjon'
+          func: fpe-alphanumeric(secret1)
+        identifikasjonsnummer:
+          pattern: ''
+          func: fpe-fnr(secret1)
+
 
 rawdata.converter.app.freg:
   schema-file-person: schema/freg-person.avsc
