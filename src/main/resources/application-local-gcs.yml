@@ -29,7 +29,7 @@ rawdata.converter:
   dryrun: true
   storage-type: gcs
   storage-root: gs://ssb-rawdata-dev/datastore
-  storage-path: /kilde/ske/freg/person/rådata/v123
+  storage-path: /kilde/ske/freg/person/rådata/v1.4
   storage-version: 1585640088000
   service-account-key-file: ../localenv/auth/gcs/dev-sirius/gcs_credentials.json
   topic: freg-playground
@@ -50,27 +50,8 @@ rawdata.converter:
           type: AES256
     config:
       debug: true
-      rules:
-        personidentifikator:
-          pattern: '**/personidentifikator'
-          func: fpe-fnr(secret1)
-        folkeregisteridentifikator:
-          pattern: '**/*{f,F}olkeregisteridentifikator'
-          func: fpe-fnr(secret1)
-        familierelasjon:
-          pattern: '**/familierelasjon/{relatertPerson}'
-          func: fpe-fnr(secret1)
-        foedselsEllerDNummer:
-          pattern: '**/foedselsEllerDNummer'
-          func: fpe-fnr(secret1)
-        utenlandskPersonidentifikasjon:
-          pattern: '**/utenlandskPersonidentifikasjon'
-          func: fpe-alphanumeric(secret1)
-        identifikasjonsnummer:
-          pattern: ''
-          func: fpe-fnr(secret1)
 
 
 rawdata.converter.app.freg:
-  schema-file-person: schema/freg-person.avsc
-  schema-file-hendelse: schema/freg-hendelse.avsc
+  schema-file-person: schema/freg-person_v1.4.avsc
+  schema-file-hendelse: schema/freg-hendelse_v1.4.avsc
