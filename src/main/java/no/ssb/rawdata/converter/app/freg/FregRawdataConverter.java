@@ -63,8 +63,7 @@ public class FregRawdataConverter extends AbstractRawdataConverter {
     public boolean isConvertible(RawdataMessage msg) {
         try {
             RawdataMessageUtil.assertKeysPresent(msg, RAWDATA_ENTRY_PERSON, RAWDATA_ENTRY_HENDELSE);
-        }
-        catch (RawdataMessageException e) {
+        } catch (RawdataMessageException e) {
             log.warn(e.getMessage());
             return false;
         }
@@ -81,9 +80,9 @@ public class FregRawdataConverter extends AbstractRawdataConverter {
 
         if (fregItem.hasManifestJson()) {
             GenericRecord metadataRecord = MetadataGenericRecordBuilder
-              .fromRawdataManifest(fregItem.getManifestJson())
-              .withULID(fregItem.getUlid())
-              .build();
+                    .fromRawdataManifest(fregItem.getManifestJson())
+                    .withULID(fregItem.getUlid())
+                    .build();
             resultBuilder.withRecord(ELEMENT_NAME_METADATA, metadataRecord);
 
         }
@@ -104,7 +103,6 @@ public class FregRawdataConverter extends AbstractRawdataConverter {
                 resultBuilder.addFailure(e);
                 log.warn("Failed to convert person xml", e);
             }
-
         }
 
         return resultBuilder.build();
@@ -115,7 +113,7 @@ public class FregRawdataConverter extends AbstractRawdataConverter {
 
         try (XmlToRecords xmlToRecords = new XmlToRecords(xmlInputStream, rootXmlElementName, schema, pseudoService::pseudonymize)) {
             xmlToRecords.forEach(record ->
-              resultBuilder.withRecord(rootXmlElementName, record)
+                    resultBuilder.withRecord(rootXmlElementName, record)
             );
         } catch (XMLStreamException | IOException e) {
             throw new FregRawdataConverterException("Error converting freg XML", e);
