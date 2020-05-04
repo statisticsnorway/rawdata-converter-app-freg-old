@@ -50,6 +50,31 @@ rawdata.converter:
           type: AES256
     config:
       debug: true
+      rules:
+        fodselsnummer:
+          pattern: '**/{folkeregisteridentifikator,foedselsEllerDNummer,relatertVedSivilstand,relatertPerson}'
+          func: fpe-fnr(secret1)
+        rettIdentitetVedIdentifikasjonsnummer:
+          pattern: '**/rettIdentitetVedIdentifikasjonsnummer'
+          func: fpe-alphanumeric(secret1)
+        organisasjonsnummer:
+          pattern: '**/organisasjonsnummer'
+          func: fpe-digits(secret1)
+        organisasjonsnavn:
+          pattern: '**/organisasjonsnavn'
+          func: fpe-letters_all+whitespace(secret1)
+        adressenavn:
+          pattern: '{**/*dressenavn,**/adresselinje}'
+          func: fpe-letters_all+whitespace(secret1)
+        identifikasjonsdokumentnummer:
+          pattern: '**/legitimasjonsdokument/identifikasjonsdokumentnummer'
+          func: fpe-alphanumeric+-(secret1)
+        personnavn:
+          pattern: '{**/fornavn,**/mellomnavn,**/etternavn,**/navn/forkortetNavn}'
+          func: fpe-letters_all+whitespace+'*?-,.(secret1)
+        identifikasjonsnummer:
+          pattern: '**/identifikasjonsnummer'
+          func: fpe-digits(secret1)
 
 
 rawdata.converter.app.freg:
