@@ -92,7 +92,7 @@ public class FregRawdataConverter extends AbstractRawdataConverter {
                 xmlToAvro(fregItem.getHendelseXml(), ELEMENT_NAME_FREG_HENDELSE, hendelseSchema, resultBuilder);
             } catch (Exception e) {
                 resultBuilder.addFailure(e);
-                log.warn("Failed to convert hendelse xml", e);
+                log.warn(String.format("Failed to convert hendelse xml %s - size=%d bytes", fregItem.toIdString(), fregItem.getHendelseXml().length), e);
             }
         }
 
@@ -101,7 +101,7 @@ public class FregRawdataConverter extends AbstractRawdataConverter {
                 xmlToAvro(fregItem.getPersonXml(), ELEMENT_NAME_FREG_PERSON, personSchema, resultBuilder);
             } catch (Exception e) {
                 resultBuilder.addFailure(e);
-                log.warn("Failed to convert person xml", e);
+                log.warn(String.format("Failed to convert person xml %s - size=%d bytes", fregItem.toIdString(), fregItem.getPersonXml().length), e);
             }
         }
 
