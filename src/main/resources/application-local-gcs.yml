@@ -56,29 +56,28 @@ rawdata.converter:
           func: fpe-fnr(secret1)
         rettIdentitetVedIdentifikasjonsnummer:
           pattern: '**/rettIdentitetVedIdentifikasjonsnummer'
-          func: fpe-alphanumeric(secret1)
+          func: fpe-fnr(secret1)
         organisasjonsnummer:
           pattern: '**/organisasjonsnummer'
           func: fpe-digits(secret1)
         organisasjonsnavn:
           pattern: '**/organisasjonsnavn'
-          func: fpe-alphanumeric_all+whitespace(secret1)
+          func: fpe-anychar(secret1)
         adressenavn:
           pattern: '{**/*dressenavn,**/adresselinje}'
-          func: fpe-alphanumeric_all+whitespace(secret1)
+          func: fpe-anychar(secret1)
         postbokseier:
           pattern: '**/postboksadresse/postbokseier'
-          func: fpe-letters_all+whitespace+'*?-,.(secret1)
+          func: fpe-anychar(secret1)
         identifikasjonsdokumentnummer:
           pattern: '**/legitimasjonsdokument/identifikasjonsdokumentnummer'
-          func: fpe-alphanumeric+-(secret1)
+          func: fpe-anychar(secret1)
         personnavn:
           pattern: '{**/fornavn,**/mellomnavn,**/etternavn,**/navn/forkortetNavn}'
-          func: fpe-letters_all+whitespace+'*?-,.(secret1)
+          func: fpe-anychar(secret1)
         identifikasjonsnummer:
           pattern: '**/identifikasjonsnummer'
-          func: fpe-digits(secret1)
-
+          func: fpe-alphanumeric_all+whitespace+punctuation
 
 rawdata.converter.app.freg:
   schema-file-person: schema/freg-person_v1.4.avsc
