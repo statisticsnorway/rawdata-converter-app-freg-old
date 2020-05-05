@@ -77,7 +77,7 @@ rawdata.converter:
           func: fpe-anychar(secret1)
         identifikasjonsnummer:
           pattern: '**/identifikasjonsnummer'
-          func: fpe-alphanumeric_all+whitespace+punctuation
+          func: fpe-anychar(secret1)
 
 rawdata.converter.app.freg:
   schema-file-person: schema/freg-person_v1.4.avsc
