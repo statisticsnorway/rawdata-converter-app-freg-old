@@ -30,7 +30,7 @@ release                        Release a new version. Update POMs and tag the ne
 ```
 
 
-## Deployment
+## Deployment 
 
 The app checks the `DEPLOYMENT_ENV` variable to determine environment specific
 configuration. Non-sensitive, environment specific configuration are defined
