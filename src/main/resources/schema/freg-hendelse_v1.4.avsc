@@ -1,5 +1,6 @@
 {
   "type" : "record",
+  "namespace": "freg.person",
   "name" : "DokumentForHendelse",
   "fields" : [ {
     "name" : "dokumentidentifikator",

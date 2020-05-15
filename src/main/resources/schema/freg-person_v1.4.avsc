@@ -1,5 +1,6 @@
 {
   "type" : "record",
+  "namespace": "freg.person",
   "name" : "Folkeregisterperson",
   "fields" : [ {
     "name" : "falskIdentitet",
