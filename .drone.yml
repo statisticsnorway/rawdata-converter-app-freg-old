@@ -136,6 +136,8 @@ steps:
 
   - name: slack-image-tag
     image: plugins/slack
+    environment:
+      DOCKER_API_VERSION: 1.38
     settings:
       webhook:
         from_secret: slack_webhook_url
