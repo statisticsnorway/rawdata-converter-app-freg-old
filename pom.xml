@@ -42,7 +42,7 @@
     <dependency>
       <groupId>no.ssb.rawdata.converter</groupId>
       <artifactId>rawdata-converter-core</artifactId>
-      <version>0.1.15</version>
+      <version>0.1.16</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
@@ -75,7 +75,7 @@
     <dependency>
       <groupId>no.ssb.avro.convert.xml</groupId>
       <artifactId>avro-buddy-xml</artifactId>
-      <version>0.0.2</version>
+      <version>0.0.3</version>
     </dependency>
     <dependency>
       <groupId>ch.qos.logback</groupId>
