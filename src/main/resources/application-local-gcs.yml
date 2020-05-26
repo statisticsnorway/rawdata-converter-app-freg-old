@@ -27,6 +27,7 @@ rawdata.encryption:
 rawdata.converter:
   active-by-default: true
   dryrun: true
+  schema-metrics-enabled: true
   storage-type: gcs
   storage-root: gs://ssb-rawdata-dev/datastore
   storage-path: /kilde/ske/freg/person/rådata/v1.4
