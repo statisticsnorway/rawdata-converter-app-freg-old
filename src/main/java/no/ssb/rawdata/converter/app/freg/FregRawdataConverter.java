@@ -50,6 +50,8 @@ public class FregRawdataConverter extends AbstractRawdataConverter {
                 .schema(ELEMENT_NAME_FREG_PERSON, personSchema)
                 .build();
 
+        log.info("aggregate schema:\n" + aggregateSchema);
+
         this.pseudoService = pseudoService;
         log.info("converter config:\n" + converterConfig.toDebugString());
     }
