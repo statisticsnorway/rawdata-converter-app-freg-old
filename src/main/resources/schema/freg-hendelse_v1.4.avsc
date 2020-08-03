@@ -330,7 +330,7 @@
                       "name" : "adresselinje",
                       "type" : {
                         "type" : "array",
-                        "items" : "string"
+                        "items" : [ "null", "string" ]
                       },
                       "source" : "element folkeregisteret:tilgjengeliggjoering:hendelse:v1:adresselinje"
                     }, {
