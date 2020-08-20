@@ -1,7 +1,5 @@
 # FREG Rawdata Converter
-[![Build Status](https://drone.prod-bip-ci.ssb.no/api/badges/statisticsnorway/rawdata-converter-app-freg/status.svg)](https://drone.prod-bip-ci.ssb.no/statisticsnorway/rawdata-converter-app-freg)
-[![Coverage](https://sonarqube.prod-bip-ci.ssb.no/api/project_badges/measure?project=no.ssb.rawdata.converter%3Arawdata-converter-app-freg&metric=coverage)](https://sonarqube.prod-bip-ci.ssb.no/dashboard?id=no.ssb.rawdata.converter%3Arawdata-converter-app-freg)
-[![Quality Gate Status](https://sonarqube.prod-bip-ci.ssb.no/api/project_badges/measure?project=no.ssb.rawdata.converter%3Arawdata-converter-app-freg&metric=alert_status)](https://sonarqube.prod-bip-ci.ssb.no/dashboard?id=no.ssb.rawdata.converter%3Arawdata-converter-app-freg)
+[![Build Status](https://dev.azure.com/statisticsnorway/Dapla/_apis/build/status/statisticsnorway.rawdata-converter-app-freg?branchName=master)](https://dev.azure.com/statisticsnorway/Dapla/_build/latest?definitionId=55&branchName=master)
 
 Convert folkeregister xml rawdata to [Parquet](https://en.wikipedia.org/wiki/Apache_Parquet).
 
