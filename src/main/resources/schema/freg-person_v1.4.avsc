@@ -1636,6 +1636,54 @@
     "default" : null,
     "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:brukAvSamiskSpraak"
   }, {
+    "name" : "forholdTilSametingetsValgmanntall",
+    "type" : [ "null", {
+      "type" : "record",
+      "name" : "ForholdTilSametingetsValgmanntall",
+      "fields" : [ {
+        "name" : "ajourholdstidspunkt",
+        "type" : [ "null", "string" ],
+        "default" : null,
+        "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:ajourholdstidspunkt"
+      }, {
+        "name" : "erGjeldende",
+        "type" : [ "null", "boolean" ],
+        "default" : null,
+        "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:erGjeldende"
+      }, {
+        "name" : "kilde",
+        "type" : [ "null", "string" ],
+        "default" : null,
+        "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:kilde"
+      }, {
+        "name" : "aarsak",
+        "type" : [ "null", "string" ],
+        "default" : null,
+        "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:aarsak"
+      }, {
+        "name" : "gyldighetstidspunkt",
+        "type" : [ "null", "string" ],
+        "default" : null,
+        "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:gyldighetstidspunkt"
+      }, {
+        "name" : "opphoerstidspunkt",
+        "type" : [ "null", "string" ],
+        "default" : null,
+        "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:opphoerstidspunkt"
+      }, {
+        "name" : "forhold",
+        "type" : "string",
+        "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:forhold"
+      }, {
+        "name" : "vedtaksdato",
+        "type" : [ "null", "string" ],
+        "default" : null,
+        "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:vedtaksdato"
+      } ]
+    } ],
+    "default" : null,
+    "source" : "element folkeregisteret:tilgjengeliggjoering:person:v1:forholdTilSametingetsValgmanntall"
+  }, {
     "name" : "preferertKontaktadresse",
     "type" : [ "null", {
       "type" : "array",
