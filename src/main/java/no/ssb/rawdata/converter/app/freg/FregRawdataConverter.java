@@ -34,7 +34,7 @@ public class FregRawdataConverter extends AbstractRawdataConverter {
     private final PseudoService pseudoService;
 
     private static final String RAWDATA_ENTRY_PERSON = "person";
-    private static final String RAWDATA_ENTRY_HENDELSE = "entry";
+    private static final String RAWDATA_ENTRY_HENDELSE = "event";
 
     private static final String ELEMENT_NAME_METADATA = "metadata";
     private static final String ELEMENT_NAME_FREG_PERSON = "folkeregisterperson";
