@@ -14,7 +14,7 @@
     <exec.mainClass>no.ssb.rawdata.converter.app.freg.Application</exec.mainClass>
     <maven-surefire-plugin.version>2.22.2</maven-surefire-plugin.version>
     <maven-failsafe-plugin.version>2.22.2</maven-failsafe-plugin.version>
-    <rawdata-converter-core.version>0.1.22</rawdata-converter-core.version>
+    <rawdata-converter-core.version>0.2.0</rawdata-converter-core.version>
     <lombok.version>1.18.12</lombok.version>
   </properties>
   <scm>
@@ -245,39 +245,4 @@
       </plugins>
     </pluginManagement>
   </build>
-
-  <profiles>
-    <profile>
-      <id>ssb-bip</id>
-      <repositories>
-        <repository>
-          <id>ssb-bip-releases</id>
-          <url>https://nexus.prod-bip-ci.ssb.no/repository/maven-releases/</url>
-          <snapshots>
-            <enabled>false</enabled>
-          </snapshots>
-        </repository>
-        <repository>
-          <id>ssb-bip-snapshots</id>
-          <url>https://nexus.prod-bip-ci.ssb.no/repository/maven-releases/</url>
-          <snapshots>
-            <enabled>true</enabled>
-          </snapshots>
-        </repository>
-      </repositories>
-      <distributionManagement>
-        <repository>
-          <id>ssb-bip-releases</id>
-          <name>SSB Nexus Releases</name>
-          <url>https://nexus.prod-bip-ci.ssb.no/repository/maven-releases/</url>
-        </repository>
-        <snapshotRepository>
-          <id>ssb-bip-snapshots</id>
-          <name>SSB Snapshot Repository</name>
-          <url>https://nexus.prod-bip-ci.ssb.no/repository/maven-snapshots/</url>
-        </snapshotRepository>
-      </distributionManagement>
-    </profile>
-  </profiles>
-
 </project>
