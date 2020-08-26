@@ -28,7 +28,7 @@ public class FregPublisherTest {
         DynamicConfiguration configuration = configuration();
         String rawdataFregFiles = configuration.evaluateToString("test.rawdata.freg.files");
         RawdataClient client = createRawdataClient(configuration);
-        RawdataProducer producer = client.producer("freg");
+        RawdataProducer producer = client.producer("freg-playground");
         List<String> positions = new ArrayList<>();
 
         Files.list(Paths.get(rawdataFregFiles)).sorted().filter(Files::isDirectory).forEach(path -> {
@@ -36,8 +36,8 @@ public class FregPublisherTest {
             positions.add(position);
             try {
                 producer.buffer(producer.builder()
-                  .put("event-document", Files.readAllBytes(findFile(path, "event-document")))
-                  .put("person-document", Files.readAllBytes(findFile(path, "person-document")))
+                  .put("event", Files.readAllBytes(findFile(path, "event-document")))
+                  .put("person", Files.readAllBytes(findFile(path, "person-document")))
                   .position(position));
             }
             catch (IOException e) {
