@@ -1,0 +1,99 @@
+micronaut:
+  application.name: rawdata-converter-freg-person
+  server.port: 28081
+
+endpoints:
+  all:
+    # Uncomment to open all management endpoints - https://docs.micronaut.io/latest/guide/index.html#providedEndpoints
+    sensitive: false
+
+oauth:
+  server-url: https://keycloak.staging-bip-app.ssb.no/auth/realms/ssb/protocol/openid-connect
+
+rawdata.client:
+  provider: postgres
+  local-temp-folder: temp
+  avro-file:
+    max.seconds: 3600
+    max.bytes: 10485760
+    sync.interval: 500000
+  postgres:
+    consumer:
+      prefetch-size: 100
+      prefetch-poll-interval-when-empty: 100
+    driver:
+      host: localhost
+      port: 15432
+      user: rdc
+      password: rdc
+      database: rdc
+
+rawdata.converter:
+  active-by-default: true
+  dryrun: false
+  schema-metrics-enabled: true
+  storage-type: local
+  storage-root: file:///Users/kenneth/dev/code/ssb/rawdata-converter-project/localenv/datasets
+  # storage-root: file:///datastore
+  storage-path: /kilde/ske/freg/person/rådata/v1.4
+  storage-version: 1585640088000
+  service-account-key-file: ../localenv/auth/gcs/dev-sirius/gcs_credentials.json
+  topic: freg-playground
+  window-max-records: 1000
+  window-max-time-in-seconds: 60
+  initial-position: FIRST
+  dataset-meta:
+    valuation: INTERNAL
+    type: UNBOUNDED
+    should-publish-meta: false
+    data-access-service:
+      host: localhost
+      port: 4242
+    metadata-distributor-service:
+      host: localhost
+      port: 2424
+      project-id: local
+      topic: metadata-distributor-dataset-updates
+  pseudo:
+    secrets:
+      repo:
+        secret1:
+          content: C5sn7B4YtwcilAwuVx6NuAsMWLusOSA/ldia40ZugDI=
+          type: AES256
+        secret2:
+          content: CsR1rI/27ejUOSltjQiBDdGeqTY5sy0Af9Tf7E/WYBU=
+          type: AES256
+    config:
+      debug: true
+      rules:
+        fodselsnummer:
+          pattern: '**/{folkeregisteridentifikator,foedselsEllerDNummer,relatertVedSivilstand,relatertPerson}'
+          func: fpe-fnr(secret1)
+        rettIdentitetVedIdentifikasjonsnummer:
+          pattern: '**/rettIdentitetVedIdentifikasjonsnummer'
+          func: fpe-fnr(secret1)
+        organisasjonsnummer:
+          pattern: '**/organisasjonsnummer'
+          func: fpe-digits(secret1)
+        organisasjonsnavn:
+          pattern: '**/organisasjonsnavn'
+          func: fpe-anychar(secret1)
+        adressenavn:
+          pattern: '{**/*dressenavn,**/adresselinje}'
+          func: fpe-anychar(secret1)
+        postbokseier:
+          pattern: '**/postboksadresse/postbokseier'
+          func: fpe-anychar(secret1)
+        identifikasjonsdokumentnummer:
+          pattern: '**/legitimasjonsdokument/identifikasjonsdokumentnummer'
+          func: fpe-anychar(secret1)
+        personnavn:
+          pattern: '{**/fornavn,**/mellomnavn,**/etternavn,**/navn/forkortetNavn}'
+          func: fpe-anychar(secret1)
+        identifikasjonsnummer:
+          pattern: '**/identifikasjonsnummer'
+          func: fpe-anychar(secret1)
+
+rawdata.converter.app.freg:
+  schema-file-person: schema/freg-person_v1.4.avsc
+  schema-file-hendelse: schema/freg-hendelse_v1.4.avsc
