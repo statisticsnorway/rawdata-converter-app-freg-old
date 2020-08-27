@@ -11,6 +11,7 @@ import no.ssb.rawdata.converter.core.ConversionResult.ConversionResultBuilder;
 import no.ssb.rawdata.converter.core.Metadata;
 import no.ssb.rawdata.converter.core.MetadataGenericRecordBuilder;
 import no.ssb.rawdata.converter.core.RawdataMessageException;
+import no.ssb.rawdata.converter.core.RawdataMessageFacade;
 import no.ssb.rawdata.converter.core.pseudo.PseudoService;
 import no.ssb.rawdata.converter.core.util.RawdataMessageUtil;
 import org.apache.avro.Schema;
