@@ -12,5 +12,4 @@ out/
 .settings
 .classpath
 datasets/
-freg-rawdata/
 dependency-reduced-pom.xml
